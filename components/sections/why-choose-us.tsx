@@ -87,46 +87,46 @@ export default function WhyChooseUs() {
   }, [])
 
   return (
-    <section id="why-us" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
-      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-primary">Why Choose Us</h2>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+    <section id="why-us" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white why-choose-us-section w-full overflow-x-hidden">
+      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700 why-choose-us-container w-full">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 why-choose-us-header">
+          <h2 className="why-choose-us-title font-bold mb-3 sm:mb-4 text-primary">Why Choose Us</h2>
+          <p className="why-choose-us-subtitle text-foreground/70 max-w-2xl mx-auto">
             We deliver enterprise software solutions that combine technical excellence, strategic thinking, and proven methodologies to achieve measurable business outcomes.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 why-choose-us-grid">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <div
                 key={index}
-                className={`group relative bg-white border-2 ${feature.borderColor} rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden`}
+                className={`group relative bg-white border-2 ${feature.borderColor} rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden why-choose-us-card`}
               >
                 {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl transition-opacity duration-500`} />
                 
                 {/* Top accent line */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.gradient} rounded-t-2xl`} />
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.gradient} rounded-t-xl sm:rounded-t-2xl`} />
 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 why-choose-us-card-content">
                   {/* Icon with colorful background */}
-                  <div className="mb-6">
+                  <div className="mb-3 sm:mb-4 md:mb-6 why-choose-us-icon-wrapper">
                     <div className="relative inline-block">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-10 blur-xl group-hover:opacity-20 rounded-xl transition-opacity duration-500`} />
-                      <div className={`relative w-16 h-16 ${feature.bgColor} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg border border-white/50`}>
-                        <Icon className={`${feature.iconColor} w-8 h-8 group-hover:scale-110 transition-transform duration-500`} />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-10 blur-xl group-hover:opacity-20 rounded-lg sm:rounded-xl transition-opacity duration-500`} />
+                      <div className={`relative why-choose-us-icon-container ${feature.bgColor} rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg border border-white/50`}>
+                        <Icon className={`${feature.iconColor} why-choose-us-icon group-hover:scale-110 transition-transform duration-500`} />
                       </div>
                     </div>
                   </div>
 
                   {/* Title and description */}
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-gray-950 transition-colors duration-300">
+                  <h3 className="why-choose-us-card-title font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-gray-950 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-[15px]">
+                  <p className="why-choose-us-card-description text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

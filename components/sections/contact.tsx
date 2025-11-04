@@ -44,69 +44,71 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
-      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-gray-900">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 contact-section w-full overflow-x-hidden">
+      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700 contact-container w-full">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 contact-header">
+          <h2 className="contact-title font-bold mb-2 sm:mb-3 text-gray-900">
             Have questions or ready to get started? Contact us today.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6 contact-grid">
           {/* Contact Info Card */}
-          <div className="bg-white rounded-2xl shadow-lg">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg contact-info-card">
             {/* Contact Details */}
-            <div className="p-6">
-              <div className="mb-5">
-                <h4 className="font-bold text-gray-900 mb-4 text-lg">Get in Touch</h4>
-                <div className="space-y-3">
-                  <div className="flex gap-3 items-start p-3 rounded-xl hover:bg-slate-50 transition-colors duration-200">
+            <div className="p-4 sm:p-6 contact-info-content">
+              <div className="mb-4 sm:mb-5">
+                <h4 className="contact-info-title font-bold text-gray-900 mb-3 sm:mb-4">Get in Touch</h4>
+                <div className="space-y-2 sm:space-y-3 contact-info-items">
+                  <div className="flex gap-2 sm:gap-3 items-start p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-slate-50 transition-colors duration-200 contact-info-item">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10">
-                        <MapPin className="text-primary" size={20} />
+                      <div className="flex items-center justify-center contact-icon-wrapper rounded-lg bg-primary/10">
+                        <MapPin className="text-primary contact-icon" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 mb-0.5 font-bold">Address</p>
-                      <p className="text-gray-900 text-sm leading-relaxed">
-                        San Francisco, CA, United States
+                      <p className="contact-info-label text-gray-500 mb-0.5 font-bold">Address</p>
+                      <p className="contact-info-text text-gray-900 leading-relaxed">
+                        Kolobot Road, Nairobi, Kenya
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-start p-3 rounded-xl hover:bg-slate-50 transition-colors duration-200">
+                  <div className="flex gap-2 sm:gap-3 items-start p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-slate-50 transition-colors duration-200 contact-info-item">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10">
-                        <Phone className="text-primary" size={20} />
+                      <div className="flex items-center justify-center contact-icon-wrapper rounded-lg bg-primary/10">
+                        <Phone className="text-primary contact-icon" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 mb-0.5 font-bold">Phone</p>
-                      <a href="tel:+15551234567" className="text-gray-900 text-sm hover:text-primary transition-colors">
-                        +1 (555) 123-4567
+                      <p className="contact-info-label text-gray-500 mb-0.5 font-bold">Phone</p>
+                      <a href="tel:+254717219448" className="contact-info-text text-gray-900 hover:text-primary transition-colors">
+                        +254717219448
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-start p-3 rounded-xl hover:bg-slate-50 transition-colors duration-200">
+                  <div className="flex gap-2 sm:gap-3 items-start p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-slate-50 transition-colors duration-200 contact-info-item">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10">
-                        <Mail className="text-primary" size={20} />
+                      <div className="flex items-center justify-center contact-icon-wrapper rounded-lg bg-primary/10">
+                        <Mail className="text-primary contact-icon" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 mb-0.5 font-bold">Email</p>
-                      <a href="mailto:hello@nocturnalsoftware.com" className="text-gray-900 text-sm hover:text-primary transition-colors break-all">
-                        hello@nocturnalsoftware.com
+                      <p className="contact-info-label text-gray-500 mb-0.5 font-bold">Email</p>
+                      <a href="mailto:info@nocturnalsoftware.com" className="contact-info-text text-gray-900 hover:text-primary transition-colors break-all">
+                        info@nocturnalsoftware.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-start p-3 rounded-xl hover:bg-green-50 transition-colors duration-200">
+                  <div className="flex gap-2 sm:gap-3 items-start p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-green-50 transition-colors duration-200 contact-info-item">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-green-100">
+                      <div className="flex items-center justify-center contact-icon-wrapper rounded-lg bg-green-100">
                         <svg
-                          className="w-5 h-5 text-green-600"
+                          className="contact-icon text-green-600"
+                          width="20"
+                          height="20"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
@@ -116,34 +118,34 @@ export default function Contact() {
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 mb-0.5 font-bold">WhatsApp</p>
-                      <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" className="text-gray-900 text-sm hover:text-green-600 transition-colors">
-                        +1 (555) 123-4567
+                      <p className="contact-info-label text-gray-500 mb-0.5 font-bold">WhatsApp</p>
+                      <a href="https://wa.me/254717219448" target="_blank" rel="noopener noreferrer" className="contact-info-text text-gray-900 hover:text-green-600 transition-colors">
+                        +254717219448
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-gray-200">
-                <h4 className="font-bold text-gray-900 mb-3 text-base flex items-center gap-2">
-                  <div className="flex items-center justify-center h-8 w-8 rounded-lg bg-primary/10">
-                    <Clock className="text-primary" size={18} />
+              <div className="pt-3 sm:pt-4 border-t border-gray-200 contact-business-hours">
+                <h4 className="font-bold text-gray-900 mb-2 sm:mb-3 contact-business-hours-title flex items-center gap-2">
+                  <div className="flex items-center justify-center contact-business-hours-icon-wrapper rounded-lg bg-primary/10">
+                    <Clock className="text-primary contact-business-hours-icon" />
                   </div>
-                  Business Hours
+                  <span className="contact-business-hours-title-text">Business Hours</span>
                 </h4>
-                <div className="space-y-1.5 text-sm">
-                  <div className="flex justify-between items-center py-1.5 px-2 rounded hover:bg-slate-50 transition-colors">
-                    <span className="font-semibold text-gray-800">Monday - Friday</span>
-                    <span className="text-gray-600">9:00 AM - 6:00 PM</span>
+                <div className="space-y-1 sm:space-y-1.5 contact-business-hours-list">
+                  <div className="flex justify-between items-center py-1 sm:py-1.5 px-2 rounded hover:bg-slate-50 transition-colors contact-business-hours-item">
+                    <span className="contact-business-hours-day font-semibold text-gray-800">Monday - Friday</span>
+                    <span className="contact-business-hours-time text-gray-600">9:00 AM - 6:00 PM</span>
                   </div>
-                  <div className="flex justify-between items-center py-1.5 px-2 rounded hover:bg-slate-50 transition-colors">
-                    <span className="font-semibold text-gray-800">Saturday</span>
-                    <span className="text-gray-600">10:00 AM - 4:00 PM</span>
+                  <div className="flex justify-between items-center py-1 sm:py-1.5 px-2 rounded hover:bg-slate-50 transition-colors contact-business-hours-item">
+                    <span className="contact-business-hours-day font-semibold text-gray-800">Saturday</span>
+                    <span className="contact-business-hours-time text-gray-600">10:00 AM - 4:00 PM</span>
                   </div>
-                  <div className="flex justify-between items-center py-1.5 px-2 rounded hover:bg-slate-50 transition-colors">
-                    <span className="font-semibold text-gray-800">Sunday</span>
-                    <span className="text-gray-500">Closed</span>
+                  <div className="flex justify-between items-center py-1 sm:py-1.5 px-2 rounded hover:bg-slate-50 transition-colors contact-business-hours-item">
+                    <span className="contact-business-hours-day font-semibold text-gray-800">Sunday</span>
+                    <span className="contact-business-hours-time text-gray-500">Closed</span>
                   </div>
                 </div>
               </div>
@@ -151,11 +153,11 @@ export default function Contact() {
           </div>
 
           {/* Contact Form Card */}
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h3 className="text-xl font-bold mb-5 text-primary">Send Us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <div>
-                <label htmlFor="name" className="block text-xs font-medium mb-1.5 text-gray-700">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 contact-form-card">
+            <h3 className="contact-form-title font-bold mb-4 sm:mb-5 text-primary">Send Us a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-3 contact-form">
+              <div className="contact-form-field">
+                <label htmlFor="name" className="block contact-form-label font-medium mb-1 sm:mb-1.5 text-gray-700">
                   Full Name
                 </label>
                 <input
@@ -165,13 +167,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-sm text-gray-900 placeholder:text-gray-400"
+                  className="w-full contact-form-input px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-gray-900 placeholder:text-gray-400"
                   placeholder="Your name"
                 />
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-xs font-medium mb-1.5 text-gray-700">
+              <div className="contact-form-field">
+                <label htmlFor="email" className="block contact-form-label font-medium mb-1 sm:mb-1.5 text-gray-700">
                   Email Address
                 </label>
                 <input
@@ -181,13 +183,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-sm text-gray-900 placeholder:text-gray-400"
+                  className="w-full contact-form-input px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-gray-900 placeholder:text-gray-400"
                   placeholder="Your email address"
                 />
               </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-xs font-medium mb-1.5 text-gray-700">
+              <div className="contact-form-field">
+                <label htmlFor="phone" className="block contact-form-label font-medium mb-1 sm:mb-1.5 text-gray-700">
                   Phone Number
                 </label>
                 <input
@@ -197,13 +199,13 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-sm text-gray-900 placeholder:text-gray-400"
+                  className="w-full contact-form-input px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-gray-900 placeholder:text-gray-400"
                   placeholder="Your phone number"
                 />
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-xs font-medium mb-1.5 text-gray-700">
+              <div className="contact-form-field">
+                <label htmlFor="message" className="block contact-form-label font-medium mb-1 sm:mb-1.5 text-gray-700">
                   Message
                 </label>
                 <textarea
@@ -213,20 +215,20 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 resize-none text-sm text-gray-900 placeholder:text-gray-400"
+                  className="w-full contact-form-textarea px-3 py-2 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 resize-none text-gray-900 placeholder:text-gray-400"
                   placeholder="Your message"
                 />
               </div>
 
               <Button 
                 type="submit" 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 rounded-lg text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 sm:py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 contact-form-submit"
               >
-                Send Message
-                <Send size={16} />
+                <span className="contact-form-submit-text">Send Message</span>
+                <Send className="contact-form-submit-icon" />
               </Button>
               
-              <p className="text-xs text-gray-500 text-center mt-2">
+              <p className="contact-form-disclaimer text-gray-500 text-center mt-2">
                 Your message will be sent to our team via email.
               </p>
             </form>
@@ -234,17 +236,17 @@ export default function Contact() {
         </div>
 
         {/* Google Map - Full Width Below Cards */}
-        <div className="mt-6 bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="w-full h-96 overflow-hidden">
+        <div className="mt-4 sm:mt-6 bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden contact-map-wrapper">
+          <div className="w-full contact-map-container overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509039!2d-122.41941548468146!3d37.774929279759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.834900721358!2d36.81508488754185!3d-1.272153232285589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f170009fb55e7%3A0x9df2a696915f3dc8!2sHarmony%20Heights!5e0!3m2!1sen!2ske!4v1762242477377!5m2!1sen!2ske"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
+              className="w-full h-full contact-map"
             />
           </div>
         </div>

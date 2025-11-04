@@ -255,3 +255,3758 @@
     animation: fade-in-delay-4 1.6s ease-out;
   }
 }
+
+/* Testimonials carousel animation */
+@keyframes testimonials-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-344px * 6));
+  }
+}
+
+@media (min-width: 640px) {
+  @keyframes testimonials-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-404px * 6));
+    }
+  }
+}
+
+.animate-testimonials-scroll {
+  animation: testimonials-scroll 30s linear infinite;
+}
+
+.animate-testimonials-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Blog Article Content Styling - Responsive */
+.article-content {
+  font-size: clamp(0.9375rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.9375rem (15px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.75;
+  color: var(--foreground);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~1.75rem (28px)
+    Desktop (1024px+): ~2rem (32px)
+  */
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: clamp(2rem, 5vh, 3rem);
+  margin-bottom: clamp(1rem, 3vh, 1.5rem);
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content h3 {
+  font-size: clamp(1.25rem, 3vw + 0.5rem, 1.5rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~1.375rem (22px)
+    Desktop (1024px+): ~1.5rem (24px)
+  */
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: clamp(1.5rem, 4vh, 2rem);
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content p {
+  color: var(--foreground);
+  opacity: 0.8;
+  margin-bottom: clamp(1rem, 3vh, 1.5rem);
+  line-height: 1.75;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-top: clamp(1rem, 3vh, 1.5rem);
+  margin-bottom: clamp(1rem, 3vh, 1.5rem);
+  padding-left: clamp(1.25rem, 4vw, 2rem);
+  color: var(--foreground);
+  opacity: 0.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content ul {
+  list-style-type: disc;
+}
+
+.article-content ol {
+  list-style-type: decimal;
+}
+
+.article-content li {
+  margin-top: clamp(0.5rem, 1.5vh, 0.75rem);
+  margin-bottom: clamp(0.5rem, 1.5vh, 0.75rem);
+  line-height: 1.75;
+  padding-left: clamp(0.25rem, 1vw, 0.5rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content li::marker {
+  color: var(--primary);
+}
+
+.article-content li strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.article-content ul ul,
+.article-content ol ol,
+.article-content ul ol,
+.article-content ol ul {
+  margin-top: clamp(0.5rem, 1.5vh, 0.75rem);
+  margin-bottom: clamp(0.5rem, 1.5vh, 0.75rem);
+}
+
+.article-content strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.article-content blockquote {
+  border-left: clamp(2px, 0.5vw, 4px) solid var(--primary);
+  margin: clamp(1.5rem, 4vh, 2rem) 0;
+  font-style: italic;
+  color: var(--foreground);
+  background: var(--card);
+  opacity: 0.5;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.article-content br {
+  line-height: 2;
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .article-content {
+    font-size: clamp(0.875rem, 2vw + 0.5rem, 1rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .article-content h2 {
+    margin-top: clamp(1.5rem, 4vh, 2rem);
+  }
+
+  .article-content h3 {
+    margin-top: clamp(1.25rem, 3vh, 1.5rem);
+  }
+  
+  .article-content ul,
+  .article-content ol {
+    padding-left: 1.25rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .article-content {
+    font-size: 0.875rem;
+  }
+  
+  .article-content h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .article-content h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .article-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .article-content ul,
+  .article-content ol {
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .article-content blockquote {
+    padding: 0.75rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Hero Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Hero Section */
+
+/* Main Hero Title - Fluid Typography using clamp() */
+.hero-title {
+  font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
+  /* 
+    Mobile (480px): ~2rem (32px)
+    Tablet (768px): ~3rem (48px)
+    Desktop (1024px+): ~4.5rem (72px)
+  */
+}
+
+/* Hero Description - Fluid Typography */
+.hero-description {
+  font-size: clamp(0.875rem, 2vw + 0.5rem, 1.25rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+}
+
+/* Hero Section Container */
+.hero-section {
+  /* Ensure proper spacing on all devices */
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Hero Content Container */
+.hero-content {
+  padding-top: clamp(2rem, 8vh, 4rem);
+  padding-bottom: clamp(2rem, 8vh, 4rem);
+}
+
+/* Hero Stats Grid - Responsive Layout */
+.hero-stats {
+  /* Adjust spacing for mobile */
+  margin-top: clamp(2rem, 6vh, 4rem);
+  padding-top: clamp(1.5rem, 4vh, 3rem);
+}
+
+/* Stat Item Spacing */
+.stat-item {
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Navigation Arrows - Hide on very small screens if needed */
+@media (max-width: 480px) {
+  .hero-nav-button {
+    /* Smaller padding for mobile */
+    padding: 0.5rem;
+  }
+  
+  /* Adjust scroll indicator position on small mobile */
+  .hero-scroll-indicator {
+    bottom: 3rem;
+  }
+  
+  /* Adjust indicators position */
+  .hero-indicators {
+    bottom: 1rem;
+  }
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: calc(100vh - 80px);
+  }
+  
+  .hero-content {
+    max-width: 90%;
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) - Below tablet */
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: calc(100vh - 80px);
+    /* Ensure content doesn't overflow */
+    overflow-x: hidden;
+  }
+  
+  .hero-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Stats remain horizontal with tighter spacing on mobile */
+  .hero-stats {
+    gap: 0.5rem;
+  }
+  
+  /* Adjust stat item text alignment and spacing on mobile */
+  .stat-item {
+    text-align: center;
+    padding: 0.25rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    /* Ensure minimum height for small screens */
+    min-height: calc(100vh - 80px);
+    padding-top: 60px; /* Slightly less padding on very small screens */
+  }
+  
+  .hero-content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  /* Further reduce spacing on small mobile - stats remain horizontal */
+  .hero-stats {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    gap: 0.25rem;
+  }
+  
+  /* Stat items on small mobile */
+  .stat-item {
+    padding: 0.125rem;
+  }
+  
+  /* Hide scroll indicator text on very small screens */
+  .hero-scroll-indicator span {
+    font-size: 0.625rem;
+  }
+  
+  /* Ensure buttons are full width on small mobile */
+  .hero-content button {
+    width: 100%;
+  }
+}
+
+/* About Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for About Section */
+
+/* About Section Title - Fluid Typography */
+.about-title {
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.75rem (28px)
+    Tablet (768px): ~2.25rem (36px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+}
+
+/* About Section Description - Fluid Typography */
+.about-description {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* About Section Container */
+.about-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* About Content Container */
+.about-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* About Grid Layout */
+.about-grid {
+  gap: clamp(2rem, 5vw, 3rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* About Content Spacing */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* About Feature Items */
+.about-features {
+  margin-top: clamp(1rem, 3vh, 1.5rem);
+}
+
+.about-feature-item {
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Icon Wrapper - Responsive Sizing */
+.about-icon-wrapper {
+  width: clamp(2.5rem, 6vw, 3rem);
+  height: clamp(2.5rem, 6vw, 3rem);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon Size - Responsive */
+.about-icon {
+  width: clamp(1.25rem, 3vw, 1.5rem);
+  height: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* Feature Title - Responsive Typography */
+.about-feature-title {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  margin-bottom: 0.25rem;
+}
+
+/* Feature Description - Responsive Typography */
+.about-feature-description {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Image Wrapper - Responsive */
+.about-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.about-image-wrapper > div {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .about-section {
+    padding-top: clamp(2.5rem, 6vh, 4rem);
+    padding-bottom: clamp(2.5rem, 6vh, 4rem);
+  }
+  
+  .about-grid {
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .about-section {
+    padding-top: clamp(2rem, 5vh, 3rem);
+    padding-bottom: clamp(2rem, 5vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .about-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
+  
+  .about-grid {
+    gap: 2rem;
+  }
+  
+  /* Image section on mobile - already ordered via Tailwind classes */
+  .about-image-wrapper {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Feature items on mobile */
+  .about-feature-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .about-icon-wrapper {
+    margin-top: 0.125rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .about-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .about-grid {
+    gap: 1.5rem;
+  }
+  
+  /* Tighter spacing on small mobile */
+  .about-features {
+    margin-top: 0.75rem;
+  }
+  
+  .about-feature-item {
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  
+  /* Smaller icon on very small mobile */
+  .about-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .about-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  /* Image minimum height adjustment */
+  .about-image-wrapper > div {
+    min-height: 250px;
+  }
+}
+
+/* Services Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Services Section */
+
+/* Services Section Container */
+.services-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Services Container */
+.services-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Services Header */
+.services-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Services Title - Fluid Typography */
+.services-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Services Subtitle - Fluid Typography */
+.services-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Services Grid */
+.services-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Services Card */
+.services-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.services-card > div {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Services Card Content */
+.services-card-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Icon Wrapper - Responsive Sizing */
+.services-icon-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Icon Container - Responsive Sizing */
+.services-icon-container {
+  width: clamp(2.5rem, 6vw, 3.5rem);
+  height: clamp(2.5rem, 6vw, 3.5rem);
+  /* 
+    Mobile (480px): ~2.5rem (40px)
+    Desktop (1024px+): ~3.5rem (56px)
+  */
+}
+
+/* Icon Size - Responsive */
+.services-icon {
+  width: clamp(1.25rem, 3vw, 1.75rem);
+  height: clamp(1.25rem, 3vw, 1.75rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Desktop (1024px+): ~1.75rem (28px)
+  */
+}
+
+/* Card Title - Responsive Typography */
+.services-card-title {
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 1.25rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+  line-height: 1.3;
+}
+
+/* Card Description - Responsive Typography */
+.services-card-description {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.9375rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.8125rem (13px)
+    Desktop (1024px+): ~0.9375rem (15px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .services-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .services-grid {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .services-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .services-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .services-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  /* Compact card padding on mobile */
+  .services-card > div {
+    padding: 0.75rem;
+  }
+  
+  /* Smaller icon on mobile */
+  .services-icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .services-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .services-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .services-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .services-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Very compact card padding on small mobile */
+  .services-card > div {
+    padding: 0.5rem;
+  }
+  
+  /* Even smaller icon on very small mobile */
+  .services-icon-container {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .services-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Tighter spacing */
+  .services-icon-wrapper {
+    margin-bottom: 0.5rem;
+  }
+  
+  .services-card-title {
+    margin-bottom: 0.375rem;
+  }
+  
+  .services-card-description {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Portfolio Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Portfolio Section */
+
+/* Portfolio Section Container */
+.portfolio-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Portfolio Header */
+.portfolio-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Portfolio Title - Fluid Typography */
+.portfolio-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Portfolio Subtitle - Fluid Typography */
+.portfolio-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Portfolio Filters */
+.portfolio-filters {
+  margin-bottom: clamp(2rem, 4vh, 3rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio-filter-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Portfolio Image Wrapper */
+.portfolio-image-wrapper {
+  height: clamp(120px, 25vw, 192px);
+  /* 
+    Mobile (480px): ~120px
+    Tablet (768px): ~150px
+    Desktop (1024px+): ~192px
+  */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+/* Portfolio Card Content */
+.portfolio-card-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Portfolio Badge */
+.portfolio-badge {
+  width: fit-content;
+  display: inline-block;
+}
+
+/* Portfolio Card Title - Responsive Typography */
+.portfolio-card-title {
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 1.25rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+  line-height: 1.3;
+}
+
+/* Portfolio Card Description - Responsive Typography */
+.portfolio-card-description {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.8125rem (13px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .portfolio-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .portfolio-grid {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .portfolio-image-wrapper {
+    height: clamp(140px, 28vw, 180px);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .portfolio-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .portfolio-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .portfolio-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portfolio-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .portfolio-filters {
+    margin-bottom: clamp(1.5rem, 3vh, 2rem);
+    gap: 0.5rem;
+  }
+  
+  .portfolio-filter-btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .portfolio-image-wrapper {
+    height: 120px;
+  }
+  
+  .portfolio-card-content {
+    padding: 0.75rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .portfolio-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .portfolio-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portfolio-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .portfolio-filters {
+    margin-bottom: 1.5rem;
+    gap: 0.375rem;
+  }
+  
+  .portfolio-filter-btn {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.6875rem;
+  }
+  
+  .portfolio-image-wrapper {
+    height: 100px;
+  }
+  
+  .portfolio-card-content {
+    padding: 0.5rem;
+  }
+  
+  /* Tighter spacing */
+  .portfolio-badge {
+    margin-bottom: 0.375rem;
+  }
+  
+  .portfolio-card-title {
+    margin-bottom: 0.375rem;
+  }
+}
+
+/* Industries Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Industries Section */
+
+/* Industries Section Container */
+.industries-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Industries Container */
+.industries-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Industries Header */
+.industries-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Industries Title - Fluid Typography */
+.industries-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Industries Subtitle - Fluid Typography */
+.industries-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Industries Grid */
+.industries-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Industries Card */
+.industries-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Industries Icon Wrapper */
+.industries-icon-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Industries Icon Container - Responsive Sizing */
+.industries-icon-container {
+  width: clamp(3rem, 8vw, 4rem);
+  height: clamp(3rem, 8vw, 4rem);
+  /* 
+    Mobile (480px): ~3rem (48px)
+    Tablet (768px): ~3.5rem (56px)
+    Desktop (1024px+): ~4rem (64px)
+  */
+}
+
+/* Industries Icon - Responsive Sizing */
+.industries-icon {
+  width: clamp(1.5rem, 4vw, 2rem);
+  height: clamp(1.5rem, 4vw, 2rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~1.75rem (28px)
+    Desktop (1024px+): ~2rem (32px)
+  */
+}
+
+/* Industries Name - Responsive Typography */
+.industries-name {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.8125rem (13px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .industries-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .industries-grid {
+    gap: clamp(1rem, 3vw, 1rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .industries-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .industries-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .industries-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .industries-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .industries-card {
+    padding: 0.75rem;
+  }
+  
+  /* Smaller icon on mobile */
+  .industries-icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .industries-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .industries-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .industries-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .industries-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .industries-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .industries-card {
+    padding: 0.5rem;
+  }
+  
+  /* Even smaller icon on very small mobile */
+  .industries-icon-container {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .industries-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Tighter spacing */
+  .industries-icon-wrapper {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Why Choose Us Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Why Choose Us Section */
+
+/* Why Choose Us Section Container */
+.why-choose-us-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Why Choose Us Container */
+.why-choose-us-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Why Choose Us Header */
+.why-choose-us-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Why Choose Us Title - Fluid Typography */
+.why-choose-us-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Why Choose Us Subtitle - Fluid Typography */
+.why-choose-us-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Why Choose Us Grid */
+.why-choose-us-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Why Choose Us Card */
+.why-choose-us-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Why Choose Us Card Content */
+.why-choose-us-card-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Why Choose Us Icon Wrapper */
+.why-choose-us-icon-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Why Choose Us Icon Container - Responsive Sizing */
+.why-choose-us-icon-container {
+  width: clamp(2.5rem, 6vw, 4rem);
+  height: clamp(2.5rem, 6vw, 4rem);
+  /* 
+    Mobile (480px): ~2.5rem (40px)
+    Tablet (768px): ~3rem (48px)
+    Desktop (1024px+): ~4rem (64px)
+  */
+}
+
+/* Why Choose Us Icon - Responsive Sizing */
+.why-choose-us-icon {
+  width: clamp(1.25rem, 3vw, 2rem);
+  height: clamp(1.25rem, 3vw, 2rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~1.5rem (24px)
+    Desktop (1024px+): ~2rem (32px)
+  */
+}
+
+/* Why Choose Us Card Title - Responsive Typography */
+.why-choose-us-card-title {
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 1.25rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+  line-height: 1.3;
+}
+
+/* Why Choose Us Card Description - Responsive Typography */
+.why-choose-us-card-description {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.9375rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.8125rem (13px)
+    Desktop (1024px+): ~0.9375rem (15px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .why-choose-us-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .why-choose-us-grid {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .why-choose-us-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .why-choose-us-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .why-choose-us-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .why-choose-us-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .why-choose-us-card {
+    padding: 0.75rem;
+  }
+  
+  /* Smaller icon on mobile */
+  .why-choose-us-icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .why-choose-us-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .why-choose-us-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .why-choose-us-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .why-choose-us-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .why-choose-us-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .why-choose-us-card {
+    padding: 0.5rem;
+  }
+  
+  /* Even smaller icon on very small mobile */
+  .why-choose-us-icon-container {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .why-choose-us-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Tighter spacing */
+  .why-choose-us-icon-wrapper {
+    margin-bottom: 0.5rem;
+  }
+  
+  .why-choose-us-card-title {
+    margin-bottom: 0.375rem;
+  }
+}
+
+/* Testimonials Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Testimonials Section */
+
+/* Testimonials Section Container */
+.testimonials-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Testimonials Header */
+.testimonials-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Testimonials Title - Fluid Typography */
+.testimonials-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Testimonials Subtitle - Fluid Typography */
+.testimonials-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Testimonials Carousel Wrapper */
+.testimonials-carousel-wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Testimonials Carousel */
+.testimonials-carousel {
+  width: max-content;
+  display: flex;
+}
+
+/* Testimonials Card Wrapper - Responsive Sizing */
+.testimonials-card-wrapper {
+  width: clamp(260px, 70vw, 380px);
+  height: clamp(280px, 75vw, 380px);
+  /* 
+    Mobile (480px): ~260px width, ~280px height
+    Tablet (768px): ~320px width, ~340px height
+    Desktop (1024px+): ~380px width, ~380px height
+  */
+  margin: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .testimonials-card-wrapper {
+    width: 320px;
+    height: 340px;
+    margin: 0 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials-card-wrapper {
+    width: 380px;
+    height: 380px;
+    margin: 0 0.75rem;
+  }
+}
+
+/* Testimonials Card */
+.testimonials-card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Testimonials Stars */
+.testimonials-stars {
+  flex-shrink: 0;
+}
+
+/* Testimonials Star - Responsive Sizing */
+.testimonials-star {
+  width: clamp(0.875rem, 2vw, 1.125rem);
+  height: clamp(0.875rem, 2vw, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+}
+
+/* Testimonials Content - Responsive Typography */
+.testimonials-content {
+  font-size: clamp(0.8125rem, 1.5vw + 0.25rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.8125rem (13px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Testimonials Author */
+.testimonials-author {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* Testimonials Avatar - Responsive Sizing */
+.testimonials-avatar {
+  width: clamp(2.5rem, 5vw, 3rem);
+  height: clamp(2.5rem, 5vw, 3rem);
+  /* 
+    Mobile (480px): ~2.5rem (40px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  flex-shrink: 0;
+}
+
+/* Testimonials Author Name - Responsive Typography */
+.testimonials-author-name {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Testimonials Author Role - Responsive Typography */
+.testimonials-author-role {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .testimonials-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .testimonials-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .testimonials-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .testimonials-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .testimonials-card-wrapper {
+    width: 260px;
+    height: 280px;
+    margin: 0 0.5rem;
+  }
+  
+  .testimonials-card {
+    padding: 0.75rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .testimonials-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .testimonials-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonials-card-wrapper {
+    width: 240px;
+    height: 260px;
+    margin: 0 0.375rem;
+  }
+  
+  .testimonials-card {
+    padding: 0.625rem;
+  }
+  
+  /* Tighter spacing */
+  .testimonials-stars {
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonials-content {
+    margin-bottom: 0.75rem;
+  }
+  
+  .testimonials-author {
+    padding-top: 0.5rem;
+  }
+}
+
+/* Technologies Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Technologies Section */
+
+/* Technologies Section Container */
+.technologies-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Technologies Container */
+.technologies-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Technologies Header */
+.technologies-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Technologies Title - Fluid Typography */
+.technologies-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Technologies Subtitle - Fluid Typography */
+.technologies-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Technologies Grid */
+.technologies-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Technologies Card */
+.technologies-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Technologies Card Content */
+.technologies-card-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Technologies Icons Wrapper - Multiple Icons */
+.technologies-icons-wrapper {
+  width: 100%;
+  max-width: 100%;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+  flex-wrap: wrap;
+}
+
+/* Technologies Icon - Responsive Sizing (Multiple Icons) */
+.technologies-icon {
+  width: clamp(2rem, 8vw, 4rem);
+  height: clamp(2rem, 8vw, 4rem);
+  /* 
+    Mobile (480px): ~2rem (32px)
+    Tablet (768px): ~3rem (48px)
+    Desktop (1024px+): ~4rem (64px)
+  */
+  flex-shrink: 0;
+}
+
+/* Technologies Icon Wrapper - Single Icon */
+.technologies-icon-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Technologies Icon Single - Responsive Sizing */
+.technologies-icon-single {
+  width: clamp(2.5rem, 10vw, 4rem);
+  height: clamp(2.5rem, 10vw, 4rem);
+  /* 
+    Mobile (480px): ~2.5rem (40px)
+    Tablet (768px): ~3.5rem (56px)
+    Desktop (1024px+): ~4rem (64px)
+  */
+}
+
+/* Technologies Text */
+.technologies-text {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Technologies Name - Responsive Typography */
+.technologies-name {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  line-height: 1.3;
+}
+
+/* Technologies Category - Responsive Typography */
+.technologies-category {
+  font-size: clamp(0.625rem, 1.2vw + 0.25rem, 0.75rem);
+  /* 
+    Mobile (480px): ~0.625rem (10px)
+    Tablet (768px): ~0.6875rem (11px)
+    Desktop (1024px+): ~0.75rem (12px)
+  */
+  line-height: 1.4;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .technologies-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .technologies-grid {
+    gap: clamp(1rem, 3vw, 1rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .technologies-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .technologies-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .technologies-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .technologies-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .technologies-card {
+    padding: 0.75rem;
+  }
+  
+  /* Smaller icons on mobile */
+  .technologies-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .technologies-icon-single {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .technologies-icons-wrapper {
+    gap: 0.375rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .technologies-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .technologies-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .technologies-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .technologies-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .technologies-card {
+    padding: 0.5rem;
+  }
+  
+  /* Even smaller icons on very small mobile */
+  .technologies-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .technologies-icon-single {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .technologies-icons-wrapper {
+    gap: 0.25rem;
+  }
+  
+  /* Tighter spacing */
+  .technologies-card-content {
+    gap: 0.375rem;
+  }
+}
+
+/* Statistics Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Statistics/Impact Section */
+
+/* Statistics Section Container */
+.statistics-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Statistics Container */
+.statistics-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Statistics Header */
+.statistics-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Statistics Title - Fluid Typography */
+.statistics-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Statistics Subtitle - Fluid Typography */
+.statistics-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Statistics Grid */
+.statistics-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Statistics Card */
+.statistics-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Statistics Card Content */
+.statistics-card-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Statistics Icon Wrapper - Responsive Sizing */
+.statistics-icon-wrapper {
+  width: clamp(2.5rem, 8vw, 4rem);
+  height: clamp(2.5rem, 8vw, 4rem);
+  /* 
+    Mobile (480px): ~2.5rem (40px)
+    Tablet (768px): ~3rem (48px)
+    Desktop (1024px+): ~4rem (64px)
+  */
+  flex-shrink: 0;
+}
+
+/* Statistics Icon - Responsive Sizing */
+.statistics-icon {
+  width: clamp(1.25rem, 4vw, 2rem);
+  height: clamp(1.25rem, 4vw, 2rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~1.5rem (24px)
+    Desktop (1024px+): ~2rem (32px)
+  */
+}
+
+/* Statistics Text */
+.statistics-text {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Statistics Value Wrapper */
+.statistics-value-wrapper {
+  flex-shrink: 0;
+}
+
+/* Statistics Value - Fluid Typography */
+.statistics-value {
+  font-size: clamp(1.75rem, 6vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.75rem (28px)
+    Tablet (768px): ~2.5rem (40px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1;
+}
+
+/* Statistics Suffix - Fluid Typography */
+.statistics-suffix {
+  font-size: clamp(1.25rem, 4vw + 0.5rem, 2.25rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~1.75rem (28px)
+    Desktop (1024px+): ~2.25rem (36px)
+  */
+  line-height: 1;
+}
+
+/* Statistics Label - Responsive Typography */
+.statistics-label {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.875rem (14px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.3;
+}
+
+/* Statistics Description - Responsive Typography */
+.statistics-description {
+  font-size: clamp(0.625rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.625rem (10px)
+    Tablet (768px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .statistics-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .statistics-grid {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .statistics-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .statistics-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .statistics-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .statistics-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .statistics-card {
+    padding: 0.75rem;
+  }
+  
+  /* Smaller icon on mobile */
+  .statistics-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .statistics-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .statistics-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .statistics-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .statistics-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .statistics-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .statistics-card {
+    padding: 0.5rem;
+  }
+  
+  /* Even smaller icon on very small mobile */
+  .statistics-icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .statistics-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Tighter spacing */
+  .statistics-card-content {
+    gap: 0.5rem;
+  }
+  
+  .statistics-value-wrapper {
+    margin-bottom: 0.375rem;
+  }
+  
+  .statistics-label {
+    margin-bottom: 0.125rem;
+  }
+}
+
+/* Blog Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Blog Section */
+
+/* Blog Section Container */
+.blog-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Blog Container */
+.blog-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog Header */
+.blog-header {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+/* Blog Title - Fluid Typography */
+.blog-title {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  /* 
+    Mobile (480px): ~1.5rem (24px)
+    Tablet (768px): ~2rem (32px)
+    Desktop (1024px+): ~3rem (48px)
+  */
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vh, 1rem);
+}
+
+/* Blog Subtitle - Fluid Typography */
+.blog-subtitle {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.6;
+}
+
+/* Blog Grid */
+.blog-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog Card */
+.blog-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog Image Wrapper - Responsive Sizing */
+.blog-image-wrapper {
+  height: clamp(120px, 25vw, 192px);
+  /* 
+    Mobile (480px): ~120px
+    Tablet (768px): ~150px
+    Desktop (1024px+): ~192px
+  */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+/* Blog Category Wrapper */
+.blog-category-wrapper {
+  z-index: 10;
+}
+
+/* Blog Category - Responsive Typography */
+.blog-category {
+  font-size: clamp(0.625rem, 1vw + 0.25rem, 0.75rem);
+  /* 
+    Mobile (480px): ~0.625rem (10px)
+    Desktop (1024px+): ~0.75rem (12px)
+  */
+  line-height: 1.4;
+}
+
+/* Blog Content */
+.blog-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blog Card Title - Responsive Typography */
+.blog-card-title {
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 1.25rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+  line-height: 1.3;
+}
+
+/* Blog Card Excerpt - Responsive Typography */
+.blog-card-excerpt {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Tablet (768px): ~0.8125rem (13px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog Meta */
+.blog-meta {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.blog-meta-item {
+  flex-shrink: 0;
+}
+
+/* Blog Meta Icon - Responsive Sizing */
+.blog-meta-icon {
+  width: clamp(0.875rem, 1.5vw, 1rem);
+  height: clamp(0.875rem, 1.5vw, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+/* Blog Meta Text - Responsive Typography */
+.blog-meta-text {
+  font-size: clamp(0.625rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.625rem (10px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+}
+
+/* Blog Read More */
+.blog-read-more {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog Read More Icon - Responsive Sizing */
+.blog-read-more-icon {
+  width: clamp(0.875rem, 1.5vw, 1rem);
+  height: clamp(0.875rem, 1.5vw, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+/* Blog View All */
+.blog-view-all {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog View All Button */
+.blog-view-all-btn {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .blog-view-all-btn {
+    width: auto;
+  }
+}
+
+/* Blog View All Icon - Responsive Sizing */
+.blog-view-all-icon {
+  width: clamp(1rem, 2vw, 1.25rem);
+  height: clamp(1rem, 2vw, 1.25rem);
+  /* 
+    Mobile (480px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .blog-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .blog-grid {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .blog-image-wrapper {
+    height: clamp(140px, 28vw, 180px);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .blog-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .blog-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .blog-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blog-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .blog-image-wrapper {
+    height: 120px;
+  }
+  
+  .blog-content {
+    padding: 0.75rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .blog-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .blog-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .blog-grid {
+    gap: 0.375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blog-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-image-wrapper {
+    height: 100px;
+  }
+  
+  .blog-content {
+    padding: 0.5rem;
+  }
+  
+  /* Tighter spacing */
+  .blog-card-title {
+    margin-bottom: 0.375rem;
+  }
+  
+  .blog-card-excerpt {
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-meta {
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .blog-view-all {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Blog Detail Page Responsive Styles */
+/* Fluid Typography and Responsive Layout for Blog Detail Page */
+
+/* Blog Detail Page Container */
+.blog-detail-page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Blog Detail Article */
+.blog-detail-article {
+  padding-top: clamp(2rem, 6vh, 4rem);
+  padding-bottom: clamp(2rem, 6vh, 4rem);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Blog Detail Container */
+.blog-detail-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog Back Button */
+.blog-back-button {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+
+@media (min-width: 640px) {
+  .blog-back-button {
+    width: auto;
+  }
+}
+
+/* Blog Back Icon - Responsive Sizing */
+.blog-back-icon {
+  width: clamp(0.875rem, 1.5vw, 1rem);
+  height: clamp(0.875rem, 1.5vw, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+/* Blog Back Text - Responsive Typography */
+.blog-back-text {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+/* Blog Category Badge Wrapper */
+.blog-category-badge-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog Category Badge */
+.blog-category-badge {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 640px) {
+  .blog-category-badge {
+    width: auto;
+  }
+}
+
+/* Blog Category Icon - Responsive Sizing */
+.blog-category-icon {
+  width: clamp(0.875rem, 1.5vw, 1rem);
+  height: clamp(0.875rem, 1.5vw, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  flex-shrink: 0;
+}
+
+/* Blog Category Text - Responsive Typography */
+.blog-category-text {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+}
+
+/* Blog Detail Title - Fluid Typography */
+.blog-detail-title {
+  font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
+  /* 
+    Mobile (480px): ~1.75rem (28px)
+    Tablet (768px): ~2.5rem (40px)
+    Desktop (1024px+): ~3.75rem (60px)
+  */
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog Meta Info */
+.blog-meta-info {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.blog-meta-item {
+  flex-shrink: 0;
+}
+
+/* Blog Meta Icon - Responsive Sizing */
+.blog-meta-icon {
+  width: clamp(1rem, 2vw, 1.25rem);
+  height: clamp(1rem, 2vw, 1.25rem);
+  /* 
+    Mobile (480px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+  flex-shrink: 0;
+}
+
+/* Blog Meta Text - Responsive Typography */
+.blog-meta-text {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog Featured Image Wrapper - Responsive Sizing */
+.blog-featured-image-wrapper {
+  height: clamp(200px, 50vw, 384px);
+  /* 
+    Mobile (480px): ~200px
+    Tablet (768px): ~250px
+    Desktop (1024px+): ~384px
+  */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.blog-featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+/* Blog Article Content */
+.blog-article-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog CTA Section */
+.blog-cta-section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog CTA Card */
+.blog-cta-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog CTA Title - Responsive Typography */
+.blog-cta-title {
+  font-size: clamp(1.25rem, 3vw + 0.5rem, 1.5rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~1.375rem (22px)
+    Desktop (1024px+): ~1.5rem (24px)
+  */
+  line-height: 1.3;
+}
+
+/* Blog CTA Description - Responsive Typography */
+.blog-cta-description {
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Tablet (768px): ~0.9375rem (15px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  line-height: 1.6;
+}
+
+/* Blog CTA Buttons */
+.blog-cta-buttons {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Blog CTA Button */
+.blog-cta-button,
+.blog-cta-button-secondary {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+@media (min-width: 640px) {
+  .blog-cta-button,
+  .blog-cta-button-secondary {
+    width: auto;
+  }
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .blog-detail-article {
+    padding-top: clamp(2rem, 5vh, 3rem);
+    padding-bottom: clamp(2rem, 5vh, 3rem);
+  }
+  
+  .blog-featured-image-wrapper {
+    height: clamp(220px, 45vw, 350px);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .blog-detail-article {
+    padding-top: clamp(1.5rem, 4vh, 2.5rem);
+    padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .blog-detail-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .blog-featured-image-wrapper {
+    height: clamp(200px, 40vw, 280px);
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-cta-card {
+    padding: 1rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .blog-detail-article {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .blog-detail-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .blog-featured-image-wrapper {
+    height: 180px;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+  }
+  
+  .blog-cta-card {
+    padding: 0.75rem;
+  }
+  
+  .blog-cta-buttons {
+    gap: 0.75rem;
+  }
+  
+  /* Tighter spacing */
+  .blog-category-badge-wrapper {
+    margin-bottom: 0.75rem;
+  }
+  
+  .blog-meta-info {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    gap: 0.75rem;
+  }
+}
+
+/* Contact Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Contact Section */
+
+/* Contact Section Container */
+.contact-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-bottom: clamp(2rem, 6vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Contact Container */
+.contact-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Header */
+.contact-header {
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+}
+
+/* Contact Title - Fluid Typography */
+.contact-title {
+  font-size: clamp(1.25rem, 4vw + 0.75rem, 2.25rem);
+  /* 
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~1.75rem (28px)
+    Desktop (1024px+): ~2.25rem (36px)
+  */
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Contact Grid */
+.contact-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Info Title - Responsive Typography */
+.contact-info-title {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.125rem);
+  /* 
+    Mobile (480px): ~1rem (16px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+  line-height: 1.3;
+}
+
+/* Contact Info Items */
+.contact-info-items {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info-item {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Contact Icon Wrapper - Responsive Sizing */
+.contact-icon-wrapper {
+  width: clamp(2.5rem, 6vw, 2.5rem);
+  height: clamp(2.5rem, 6vw, 2.5rem);
+  /* 
+    Mobile (480px): ~2.5rem (40px)
+    Desktop (1024px+): ~2.5rem (40px)
+  */
+  flex-shrink: 0;
+}
+
+/* Contact Icon - Responsive Sizing */
+.contact-icon {
+  width: clamp(1rem, 2.5vw, 1.25rem);
+  height: clamp(1rem, 2.5vw, 1.25rem);
+  /* 
+    Mobile (480px): ~1rem (16px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+}
+
+/* Contact Info Label - Responsive Typography */
+.contact-info-label {
+  font-size: clamp(0.625rem, 1.2vw + 0.25rem, 0.75rem);
+  /* 
+    Mobile (480px): ~0.625rem (10px)
+    Desktop (1024px+): ~0.75rem (12px)
+  */
+  line-height: 1.4;
+}
+
+/* Contact Info Text - Responsive Typography */
+.contact-info-text {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Contact Business Hours */
+.contact-business-hours {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-business-hours-title {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-business-hours-title-text {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  line-height: 1.3;
+}
+
+/* Contact Business Hours Icon Wrapper */
+.contact-business-hours-icon-wrapper {
+  width: clamp(2rem, 5vw, 2rem);
+  height: clamp(2rem, 5vw, 2rem);
+  flex-shrink: 0;
+}
+
+/* Contact Business Hours Icon */
+.contact-business-hours-icon {
+  width: clamp(0.875rem, 2vw, 1.125rem);
+  height: clamp(0.875rem, 2vw, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+}
+
+/* Contact Business Hours List */
+.contact-business-hours-list {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-business-hours-item {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Contact Business Hours Day - Responsive Typography */
+.contact-business-hours-day {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+/* Contact Business Hours Time - Responsive Typography */
+.contact-business-hours-time {
+  font-size: clamp(0.6875rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.6875rem (11px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Form Title - Responsive Typography */
+.contact-form-title {
+  font-size: clamp(1.125rem, 2.5vw + 0.5rem, 1.25rem);
+  /* 
+    Mobile (480px): ~1.125rem (18px)
+    Desktop (1024px+): ~1.25rem (20px)
+  */
+  line-height: 1.3;
+}
+
+/* Contact Form */
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Form Field */
+.contact-form-field {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Form Label - Responsive Typography */
+.contact-form-label {
+  font-size: clamp(0.75rem, 1.2vw + 0.25rem, 0.75rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.75rem (12px)
+  */
+  line-height: 1.4;
+}
+
+/* Contact Form Input */
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.contact-form-textarea {
+  min-height: clamp(100px, 20vw, 120px);
+  /* 
+    Mobile (480px): ~100px
+    Desktop (1024px+): ~120px
+  */
+}
+
+/* Contact Form Submit */
+.contact-form-submit {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Form Submit Text - Responsive Typography */
+.contact-form-submit-text {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+/* Contact Form Submit Icon - Responsive Sizing */
+.contact-form-submit-icon {
+  width: clamp(0.875rem, 1.5vw, 1rem);
+  height: clamp(0.875rem, 1.5vw, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+}
+
+/* Contact Form Disclaimer - Responsive Typography */
+.contact-form-disclaimer {
+  font-size: clamp(0.625rem, 1.2vw + 0.25rem, 0.75rem);
+  /* 
+    Mobile (480px): ~0.625rem (10px)
+    Desktop (1024px+): ~0.75rem (12px)
+  */
+  line-height: 1.4;
+}
+
+/* Contact Map Wrapper */
+.contact-map-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Map Container - Responsive Sizing */
+.contact-map-container {
+  height: clamp(250px, 50vw, 384px);
+  /* 
+    Mobile (480px): ~250px
+    Tablet (768px): ~300px
+    Desktop (1024px+): ~384px
+  */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.contact-map {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding-top: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5vh, 4rem);
+  }
+  
+  .contact-grid {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .contact-map-container {
+    height: clamp(280px, 45vw, 350px);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .contact-section {
+    padding-top: clamp(1.5rem, 4vh, 3rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .contact-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .contact-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-header {
+    margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  }
+  
+  .contact-info-content {
+    padding: 0.75rem;
+  }
+  
+  .contact-form-card {
+    padding: 0.75rem;
+  }
+  
+  /* Smaller icons on mobile */
+  .contact-icon-wrapper {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .contact-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .contact-map-container {
+    height: clamp(250px, 40vw, 300px);
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .contact-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .contact-grid {
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-info-content {
+    padding: 0.625rem;
+  }
+  
+  .contact-form-card {
+    padding: 0.625rem;
+  }
+  
+  /* Even smaller icons on very small mobile */
+  .contact-icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .contact-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  
+  .contact-business-hours-icon-wrapper {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .contact-business-hours-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  
+  .contact-map-container {
+    height: 200px;
+  }
+  
+  /* Tighter spacing */
+  .contact-info-items {
+    gap: 0.5rem;
+  }
+  
+  .contact-info-item {
+    padding: 0.5rem;
+  }
+  
+  .contact-form {
+    gap: 0.75rem;
+  }
+  
+  .contact-form-field {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form-textarea {
+    min-height: 90px;
+    rows: 3;
+  }
+}
+
+/* Footer Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Footer Section */
+
+/* Footer Section Container */
+.footer-section {
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Container */
+.footer-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  padding-top: clamp(2rem, 5vh, 4rem);
+  padding-bottom: clamp(2rem, 5vh, 4rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Grid */
+.footer-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Brand Column */
+.footer-brand-col {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 0;
+  /* No extra padding needed without logo */
+}
+
+/* Footer Company Name Link */
+.footer-company-name-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-company-name-link:hover {
+  opacity: 0.8;
+}
+
+/* Footer Brand Content */
+.footer-brand-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Company Name - Responsive Typography */
+.footer-company-name {
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 1.5rem);
+  /* 
+    Mobile (480px): ~1rem (16px)
+    Tablet (768px): ~1.25rem (20px)
+    Desktop (1024px+): ~1.5rem (24px)
+  */
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Footer Description - Responsive Typography */
+.footer-description {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Footer Social Icons */
+.footer-social-icons {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* Footer Social Icon - Responsive Sizing */
+.footer-social-icon {
+  width: clamp(2.25rem, 5vw, 2.5rem);
+  height: clamp(2.25rem, 5vw, 2.5rem);
+  /* 
+    Mobile (480px): ~2.25rem (36px)
+    Desktop (1024px+): ~2.5rem (40px)
+  */
+  flex-shrink: 0;
+}
+
+/* Footer Social Icon Inner - Responsive Sizing */
+.footer-social-icon-inner {
+  width: clamp(0.875rem, 2vw, 1.125rem);
+  height: clamp(0.875rem, 2vw, 1.125rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1.125rem (18px)
+  */
+}
+
+/* Footer Column */
+.footer-column {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Column Title - Responsive Typography */
+.footer-column-title {
+  font-size: clamp(0.875rem, 1.8vw + 0.25rem, 1rem);
+  /* 
+    Mobile (480px): ~0.875rem (14px)
+    Desktop (1024px+): ~1rem (16px)
+  */
+  line-height: 1.3;
+}
+
+/* Footer Column List */
+.footer-column-list {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Column Item */
+.footer-column-item {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Footer Bullet - Responsive Sizing */
+.footer-bullet {
+  width: clamp(0.375rem, 0.8vw, 0.5rem);
+  height: clamp(0.375rem, 0.8vw, 0.5rem);
+  /* 
+    Mobile (480px): ~0.375rem (6px)
+    Desktop (1024px+): ~0.5rem (8px)
+  */
+  flex-shrink: 0;
+}
+
+/* Footer Link - Responsive Typography */
+.footer-link {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Copyright - Responsive Typography */
+.footer-copyright {
+  font-size: clamp(0.6875rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.6875rem (11px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Footer Built With - Responsive Typography */
+.footer-built-with {
+  font-size: clamp(0.6875rem, 1.2vw + 0.25rem, 0.875rem);
+  /* 
+    Mobile (480px): ~0.6875rem (11px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+}
+
+/* Footer Heart Icon - Responsive Sizing */
+.footer-heart-icon {
+  width: clamp(0.75rem, 1.5vw, 0.875rem);
+  height: clamp(0.75rem, 1.5vw, 0.875rem);
+  /* 
+    Mobile (480px): ~0.75rem (12px)
+    Desktop (1024px+): ~0.875rem (14px)
+  */
+  flex-shrink: 0;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .footer-container {
+    padding-top: clamp(2rem, 4vh, 3rem);
+    padding-bottom: clamp(2rem, 4vh, 3rem);
+  }
+  
+  .footer-grid {
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .footer-brand-col {
+    padding-top: 0;
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .footer-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .footer-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: clamp(1.5rem, 3vh, 2.5rem);
+    padding-bottom: clamp(1.5rem, 3vh, 2.5rem);
+    max-width: 100%;
+  }
+  
+  .footer-grid {
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-brand-col {
+    padding-top: 0;
+  }
+  
+  /* Smaller social icons on mobile */
+  .footer-social-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .footer-social-icon-inner {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  
+  /* Tighter spacing */
+  .footer-column-title {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-column-list {
+    gap: 0.5rem;
+  }
+  
+  .footer-column-item {
+    gap: 0.5rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .footer-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .footer-grid {
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-brand-col {
+    padding-top: 0;
+  }
+  
+  .footer-company-name {
+    font-size: 0.875rem;
+    margin-bottom: 0.375rem;
+  }
+  
+  /* Even smaller social icons on very small mobile */
+  .footer-social-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  
+  .footer-social-icon-inner {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  /* Tighter spacing */
+  .footer-column-title {
+    margin-bottom: 0.75rem;
+    font-size: 0.8125rem;
+  }
+  
+  .footer-column-list {
+    gap: 0.5rem;
+  }
+  
+  .footer-column-item {
+    gap: 0.5rem;
+  }
+  
+  .footer-bullet {
+    width: 0.375rem;
+    height: 0.375rem;
+  }
+  
+  .footer-link {
+    font-size: 0.75rem;
+  }
+  
+  .footer-description {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  
+  .footer-copyright,
+  .footer-built-with {
+    font-size: 0.6875rem;
+  }
+  
+  .footer-heart-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .footer-bottom {
+    padding-top: 1rem;
+    gap: 0.75rem;
+  }
+}

@@ -10,8 +10,11 @@ import Industries from "@/components/sections/industries"
 import WhyChooseUs from "@/components/sections/why-choose-us"
 import Testimonials from "@/components/sections/testimonials"
 import Technologies from "@/components/sections/technologies"
+import Statistics from "@/components/sections/statistics"
 import Team from "@/components/sections/team"
+import Blog from "@/components/sections/blog"
 import Contact from "@/components/sections/contact"
+import CTA from "@/components/sections/cta"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -28,6 +31,7 @@ export default function Home() {
         "why-us",
         "testimonials",
         "technologies",
+        "statistics",
         "team",
         "contact",
       ]
@@ -59,8 +63,11 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <Technologies />
+      <Statistics />
       <Team />
+      <Blog />
       <Contact />
+      <CTA />
       <Footer />
     </main>
   )
