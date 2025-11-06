@@ -4,16 +4,19 @@ import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Clock, Loader2 } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null)
+  const { toast } = useToast()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,10 +40,43 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", phone: "", message: "" })
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        })
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      } else {
+        toast({
+          title: "Failed to send message",
+          description: data.error || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        })
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -222,10 +258,20 @@ export default function Contact() {
 
               <Button 
                 type="submit" 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 sm:py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 contact-form-submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 sm:py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 contact-form-submit disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="contact-form-submit-text">Send Message</span>
-                <Send className="contact-form-submit-icon" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <span className="contact-form-submit-text">Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="contact-form-submit-text">Send Message</span>
+                    <Send className="contact-form-submit-icon" />
+                  </>
+                )}
               </Button>
               
               <p className="contact-form-disclaimer text-gray-500 text-center mt-2">
