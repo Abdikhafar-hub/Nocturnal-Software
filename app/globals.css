@@ -2878,8 +2878,6 @@
 .blog-detail-container {
   padding-left: clamp(1rem, 4vw, 2rem);
   padding-right: clamp(1rem, 4vw, 2rem);
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 

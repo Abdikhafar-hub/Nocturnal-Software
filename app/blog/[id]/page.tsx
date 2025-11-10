@@ -51,7 +51,7 @@ export default function BlogPostPage() {
       
       {/* Article Header */}
       <article className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 blog-detail-article">
-        <div className="max-w-4xl mx-auto blog-detail-container w-full">
+        <div className="max-w-4xl mx-auto blog-detail-container">
           {/* Back Button */}
           <Button
             variant="ghost"
