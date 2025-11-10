@@ -46,8 +46,8 @@ const services = [
   },
   {
     icon: Code,
-    title: "Custom Software Development",
-    description: "Custom software development for your business needs, including ERP, CRM, and more.",
+    title: "Software Consultancy",
+    description: "Expert guidance and strategic advice to help you make informed technology decisions and optimize your software solutions.",
     color: "from-emerald-500 to-emerald-600",
     iconColor: "text-emerald-600",
     bgColor: "bg-emerald-50",
