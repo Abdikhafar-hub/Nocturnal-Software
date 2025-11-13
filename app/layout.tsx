@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     "We build the future, one line of code at a time. Full-stack software solutions for businesses, enterprises, and innovators.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.jpeg",
+    shortcut: "/favicon.jpeg",
+    apple: "/favicon.jpeg",
+  },
 }
 
 export default function RootLayout({
