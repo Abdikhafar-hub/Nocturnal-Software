@@ -74,7 +74,7 @@ export default function About() {
           {/* Image Section */}
           <div className="relative about-image-wrapper order-1 md:order-2">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl sm:rounded-2xl blur-3xl" />
-            <div className="relative bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden h-full min-h-[300px] sm:min-h-[400px] md:min-h-full">
+            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden h-full min-h-[300px] sm:min-h-[400px] md:min-h-full">
               <img
                 src="/about.jpg"
                 alt="About Nocturnal Software Solutions"

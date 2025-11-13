@@ -16,6 +16,7 @@ import Blog from "@/components/sections/blog"
 import Contact from "@/components/sections/contact"
 import CTA from "@/components/sections/cta"
 import Footer from "@/components/footer"
+import NocturnalWebGLBackground from "@/components/nocturnal-webgl-background"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -53,7 +54,8 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background relative">
+      <NocturnalWebGLBackground />
       <Navigation activeSection={activeSection} />
       <Hero />
       <About />

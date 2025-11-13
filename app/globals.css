@@ -930,6 +930,28 @@
   overflow-wrap: break-word;
 }
 
+/* Service Image Wrapper - Responsive Sizing */
+.services-image-wrapper {
+  height: clamp(80px, 15vw, 120px);
+  /* 
+    Mobile (480px): ~80px
+    Tablet (768px): ~100px
+    Desktop (1024px+): ~120px
+  */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Service Image - Responsive with Fixed Height */
+.services-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
 /* Icon Wrapper - Responsive Sizing */
 .services-icon-wrapper {
   width: 100%;
@@ -938,21 +960,21 @@
 
 /* Icon Container - Responsive Sizing */
 .services-icon-container {
-  width: clamp(2.5rem, 6vw, 3.5rem);
-  height: clamp(2.5rem, 6vw, 3.5rem);
+  width: clamp(2rem, 5vw, 2.75rem);
+  height: clamp(2rem, 5vw, 2.75rem);
   /* 
-    Mobile (480px): ~2.5rem (40px)
-    Desktop (1024px+): ~3.5rem (56px)
+    Mobile (480px): ~2rem (32px)
+    Desktop (1024px+): ~2.75rem (44px)
   */
 }
 
 /* Icon Size - Responsive */
 .services-icon {
-  width: clamp(1.25rem, 3vw, 1.75rem);
-  height: clamp(1.25rem, 3vw, 1.75rem);
+  width: clamp(1rem, 2.5vw, 1.375rem);
+  height: clamp(1rem, 2.5vw, 1.375rem);
   /* 
-    Mobile (480px): ~1.25rem (20px)
-    Desktop (1024px+): ~1.75rem (28px)
+    Mobile (480px): ~1rem (16px)
+    Desktop (1024px+): ~1.375rem (22px)
   */
 }
 
@@ -975,7 +997,7 @@
     Tablet (768px): ~0.8125rem (13px)
     Desktop (1024px+): ~0.9375rem (15px)
   */
-  line-height: 1.5;
+  line-height: 1.4;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -989,6 +1011,10 @@
   
   .services-grid {
     gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .services-image-wrapper {
+    height: clamp(90px, 18vw, 110px);
   }
 }
 
@@ -1018,18 +1044,18 @@
   
   /* Compact card padding on mobile */
   .services-card > div {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
   
   /* Smaller icon on mobile */
   .services-icon-container {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
   
   .services-icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
 
@@ -1057,20 +1083,26 @@
     margin-bottom: 1.5rem;
   }
   
+  /* Service image on very small mobile */
+  .services-image-wrapper {
+    height: 70px;
+    margin-bottom: 0.375rem;
+  }
+  
   /* Very compact card padding on small mobile */
   .services-card > div {
-    padding: 0.5rem;
+    padding: 0.375rem;
   }
   
   /* Even smaller icon on very small mobile */
   .services-icon-container {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
   }
   
   .services-icon {
-    width: 1rem;
-    height: 1rem;
+    width: 0.875rem;
+    height: 0.875rem;
   }
   
   /* Tighter spacing */
