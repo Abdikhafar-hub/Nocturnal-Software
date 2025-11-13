@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" })
 
 export const metadata: Metadata = {
-  title: "Nocturnal Software Solutions - AI-Driven Digital Solutions",
+  title: "Nocturnal Software Solutions - Innovation-Driven Digital Solutions",
   description:
     "We build the future, one line of code at a time. Full-stack software solutions for businesses, enterprises, and innovators.",
   generator: "v0.app",
