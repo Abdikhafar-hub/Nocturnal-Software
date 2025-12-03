@@ -160,15 +160,15 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 footer-column-item">
                 <span className="footer-bullet rounded-full bg-orange-500 flex-shrink-0"></span>
-                <a href="#" className="footer-link text-white/70 hover:text-white transition-colors duration-200">
+                <Link href="/privacy-policy" className="footer-link text-white/70 hover:text-white transition-colors duration-200">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li className="flex items-center gap-2 footer-column-item">
                 <span className="footer-bullet rounded-full bg-orange-500 flex-shrink-0"></span>
-                <a href="#" className="footer-link text-white/70 hover:text-white transition-colors duration-200">
+                <Link href="/terms-of-service" className="footer-link text-white/70 hover:text-white transition-colors duration-200">
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
