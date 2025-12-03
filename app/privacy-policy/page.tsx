@@ -591,10 +591,10 @@ export default function PrivacyPolicyPage() {
                   
                   <div className="mt-4 p-4 bg-muted rounded-lg">
                     <p><strong className="text-primary">Nocturnal Software Solutions</strong></p>
-                    <p><strong>Data Protection Officer</strong></p>
-                    <p>Email: <a href="mailto:privacy@nocturnalsoftwaresolutions.com" className="text-primary hover:underline">privacy@nocturnalsoftwaresolutions.com</a></p>
+                    <p><strong>Chief Technology Officer: Abdikhafar Issack</strong></p>
+                    <p>Email: <a href="mailto:abdikhafarissack@gmail.com" className="text-primary hover:underline">abdikhafarissack@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+2547219448" className="text-primary hover:underline">+2547219448</a></p>
                     <p>Address: Nairobi, Kenya</p>
-                    <p>Phone: [Your Contact Number]</p>
                   </div>
 
                   <p className="mt-4">We are committed to addressing your concerns and will respond to your inquiries within <strong className="text-primary">30 days</strong> (or as required by applicable law).</p>

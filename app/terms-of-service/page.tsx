@@ -622,10 +622,10 @@ export default function TermsOfServicePage() {
                   
                   <div className="mt-4 p-4 bg-muted rounded-lg">
                     <p><strong className="text-primary">Nocturnal Software Solutions</strong></p>
-                    <p><strong>Legal Department</strong></p>
-                    <p>Email: <a href="mailto:legal@nocturnalsoftwaresolutions.com" className="text-primary hover:underline">legal@nocturnalsoftwaresolutions.com</a></p>
+                    <p><strong>Contact: Abdikhafar Issack</strong></p>
+                    <p>Email: <a href="mailto:abdikhafarissack@gmail.com" className="text-primary hover:underline">abdikhafarissack@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+2547219448" className="text-primary hover:underline">+2547219448</a></p>
                     <p>Address: Nairobi, Kenya</p>
-                    <p>Phone: [Your Contact Number]</p>
                   </div>
 
                   <p className="mt-4">We will respond to your inquiries within a reasonable timeframe.</p>
