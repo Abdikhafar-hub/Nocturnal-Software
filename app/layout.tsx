@@ -52,9 +52,9 @@ export const metadata: Metadata = {
       "We build the future, one line of code at a time. Full-stack software solutions for businesses, enterprises, and innovators. Based in Nairobi, Kenya.",
     images: [
       {
-        url: `${siteUrl}/logo.png`,
-        width: 1200,
-        height: 630,
+        url: `${siteUrl}/favicon.jpeg`,
+        width: 512,
+        height: 512,
         alt: "Nocturnal Software Solutions",
       },
     ],
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Nocturnal Software Solutions - Innovation-Driven Digital Solutions",
     description:
       "We build the future, one line of code at a time. Full-stack software solutions for businesses, enterprises, and innovators.",
-    images: [`${siteUrl}/logo.png`],
+    images: [`${siteUrl}/favicon.jpeg`],
     creator: "@nocturnalsoftware",
   },
   robots: {
