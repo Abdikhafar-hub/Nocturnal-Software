@@ -21,7 +21,7 @@ export default function WebGLBackground() {
     renderer: THREE.WebGLRenderer
     animationId: number
   } | null>(null)
-//h
+
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
