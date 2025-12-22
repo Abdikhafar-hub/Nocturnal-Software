@@ -8,7 +8,7 @@
  */
 
 "use client"
-//disable-next-line import/no-extraneous-dependencies
+//di
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js"
