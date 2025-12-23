@@ -3006,10 +3006,10 @@
 
 /* Blog Detail Title - Fluid Typography */
 .blog-detail-title {
-  font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
+  font-size: clamp(1.25rem, 4vw + 0.75rem, 3.75rem);
   /* 
-    Mobile (480px): ~1.75rem (28px)
-    Tablet (768px): ~2.5rem (40px)
+    Mobile (480px): ~1.25rem (20px)
+    Tablet (768px): ~2rem (32px)
     Desktop (1024px+): ~3.75rem (60px)
   */
   line-height: 1.2;
