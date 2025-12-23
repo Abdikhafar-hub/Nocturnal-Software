@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { blogPosts } from "@/lib/blog-data"
+import { getSortedBlogPosts } from "@/lib/blog-data"
 
 export default function Blog() {
   const ref = useRef<HTMLDivElement>(null)
@@ -37,7 +37,7 @@ export default function Blog() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 blog-grid">
-          {blogPosts.map((post) => (
+          {getSortedBlogPosts().slice(0, 6).map((post) => (
             <article
               key={post.id}
               className="group bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 blog-card"
@@ -107,10 +107,10 @@ export default function Blog() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 blog-view-all-btn"
           >
-            <a href="#">
+            <Link href="/blogs">
               View All Articles
               <ArrowRight className="ml-2 blog-view-all-icon" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

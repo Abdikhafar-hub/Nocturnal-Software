@@ -928,10 +928,110 @@ export const blogPosts: BlogPost[] = [
       <p>Let today's incident be a catalyst for change. Let's build systems that don't just defend — they adapt, recover, and evolve. The future of our digital infrastructure depends on it.</p>
     `,
   },
+  {
+    id: 8,
+    title: "CVE-2025-68613: Critical RCE Vulnerability Disclosed in n8n Workflow Automation",
+    excerpt:
+      "A critical security vulnerability has been identified in the n8n workflow automation platform, rated with a CVSS score of 9.9, allowing authenticated attackers to execute arbitrary code on affected systems.",
+    author: "Abdikhafar Issack",
+    date: "Dec 23, 2025",
+    readTime: "8 min read",
+    category: "Cybersecurity",
+    image: "/cve.png",
+    content: `
+      <h2>Critical vulnerability alert for n8n users regarding CVE-2025-68613</h2>
+      
+      <p>This high-severity Remote Code Execution (RCE) flaw impacts the popular workflow automation platform and poses a significant risk to organizations relying on it for internal integrations.</p>
+      
+      <p>The vulnerability stems from the workflow expression evaluation system, allowing authenticated attackers to execute arbitrary code on the host server. This can lead to full system compromise, granting adversaries access to sensitive APIs, credentials, and cloud services connected to your workflows. The issue affects n8n versions starting from 0.211.0.</p>
+      
+      <p>Security teams are advised to upgrade to the latest patched versions immediately to close this attack vector.</p>
+      
+      <h2>What Is CVE-2025-68613?</h2>
+      
+      <p>CVE-2025-68613 is a Remote Code Execution (RCE) vulnerability related to how n8n evaluates expressions during workflow configuration. In certain scenarios, user-supplied expressions may be evaluated in a context that is not sufficiently isolated from the underlying runtime.</p>
+      
+      <p>An attacker with valid authentication could abuse this behavior to execute arbitrary code with the same privileges as the n8n process. In practical terms, this could result in full compromise of the affected instance.</p>
+      
+      <p>With a CVSS score of 9.9, the vulnerability represents a high-impact scenario where limited access can quickly escalate into complete system control.</p>
+      
+      <p>Tracking and responding to high-severity vulnerabilities like CVE-2025-68613 requires more than patch awareness. Vulnerability Intelligence helps security teams monitor newly disclosed CVEs, understand their technical impact, and assess how rapidly risk is evolving based on exploit availability and threat actor activity.</p>
+      
+      <h2>Which n8n Versions Are Affected?</h2>
+      
+      <p>The vulnerability affects n8n versions starting from 0.211.0 up to, but not including, 1.120.4.</p>
+      
+      <p>The issue has been fixed in the following releases:</p>
+      
+      <ul>
+        <li>1.120.4</li>
+        <li>1.121.1</li>
+        <li>1.122.0</li>
+      </ul>
+      
+      <p>Any deployment running an affected version should be considered at risk.</p>
+      
+      <h2>How Could This Vulnerability Impact n8n Deployments?</h2>
+      
+      <p>n8n is commonly used to automate business logic, data flows, and integrations with internal systems, cloud services, and third-party APIs. If CVE-2025-68613 is exploited, attackers could gain control over the n8n instance, access sensitive data handled by workflows, modify or inject malicious logic, and execute system-level operations on the host.</p>
+      
+      <p>Because workflow automation platforms often store credentials and access tokens, a compromise at this layer can quickly turn into a broader security incident. According to the researchers, a large number of n8n instances are reachable over the internet. As of late December 2025, more than 100,000 potentially vulnerable instances were observed online, with significant concentrations in the United States, Germany, France, Brazil, and Singapore.</p>
+      
+      <p>This level of exposure increases the likelihood of scanning and opportunistic exploitation, especially after public disclosure.</p>
+      
+      <h2>PoC Availability and Risk Implications</h2>
+      
+      <p>Public Proof-of-Concept (PoC) material for CVE-2025-68613 has been released. The availability of PoC code materially increases the risk associated with this vulnerability.</p>
+      
+      <p>While exploitation requires authentication, published PoCs lower the technical barrier and make abuse easier in environments with open registration, weak access controls, or shared workflow usage. Organizations should assume increased attacker interest following disclosure.</p>
+      
+      <p>Attack Surface Management (ASM) capabilities help organizations identify whether n8n instances are exposed to the internet and correlate vulnerable software versions with real, reachable assets. This allows teams to move from theoretical risk to confirmed exposure, prioritizing remediation efforts where they matter most.</p>
+      
+      <p>By combining vulnerability context with continuous external asset discovery, security teams gain earlier awareness and faster response when critical issues like CVE-2025-68613 emerge.</p>
+      
+      <h2>Is There Evidence of Active Exploitation?</h2>
+      
+      <p>At the time of writing, there are no confirmed reports of widespread exploitation. However, the combination of critical severity, broad internet exposure, and publicly available PoC code places this vulnerability in a high-risk category that warrants immediate action.</p>
+      
+      <h2>What Should Administrators Do Next?</h2>
+      
+      <p>Administrators should upgrade to a patched version as soon as possible. n8n version 1.122.0 and later introduce additional safeguards that restrict expression evaluation and prevent access to sensitive runtime objects.</p>
+      
+      <p>If immediate upgrading is not possible, temporary mitigations include limiting workflow creation and editing permissions to fully trusted users, disabling public registration where applicable, and deploying n8n in a hardened environment with restricted operating system privileges and network access. These steps reduce risk but do not fully eliminate it.</p>
+      
+      <p>Applying the official updates remains the only complete remediation for CVE-2025-68613.</p>
+      
+      <blockquote style="border-left: 4px solid var(--primary); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: var(--foreground);">
+        Critical vulnerabilities like CVE-2025-68613 serve as a reminder that workflow automation platforms, while powerful, must be secured with the same rigor as any critical infrastructure. Regular updates, proper access controls, and continuous monitoring are essential for maintaining a secure automation environment.
+      </blockquote>
+    `,
+  },
   
 ]
 
 export function getBlogPost(id: number): BlogPost | undefined {
   return blogPosts.find((post) => post.id === id)
+}
+
+// Helper function to parse date string (e.g., "Dec 30, 2025") to Date object
+function parseDate(dateStr: string): Date {
+  const months: { [key: string]: number } = {
+    Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+    Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+  }
+  const parts = dateStr.split(" ")
+  const month = months[parts[0]]
+  const day = parseInt(parts[1].replace(",", ""), 10)
+  const year = parseInt(parts[2], 10)
+  return new Date(year, month, day)
+}
+
+// Get blog posts sorted by date (newest first)
+export function getSortedBlogPosts(): BlogPost[] {
+  return [...blogPosts].sort((a, b) => {
+    const dateA = parseDate(a.date)
+    const dateB = parseDate(b.date)
+    return dateB.getTime() - dateA.getTime()
+  })
 }
 
