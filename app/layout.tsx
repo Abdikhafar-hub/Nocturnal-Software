@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import StructuredData from "@/components/structured-data"
@@ -98,9 +99,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Google Tag Manager */}
-        <script
+      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
+        {/* Google Tag Manager - Script component with beforeInteractive places it in head */}
+        <Script
+          id="gtm-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -111,9 +114,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
-        {/* Google Tag Manager (noscript) */}
+        {/* Google Tag Manager (noscript) - Must be immediately after body tag */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TWH2XV6R"
