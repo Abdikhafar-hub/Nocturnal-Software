@@ -4,7 +4,7 @@
  * This is a React component example mshowing how to implement
  * a WebGL background simiar to cornrevolution.resn.global
  * 
- * Note: This requirews three.js and @react-three/fiber packages
+ * Note: This requirews three.js and @rmeact-three/fiber packages
  */
 
 "use client"
