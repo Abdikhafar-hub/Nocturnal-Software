@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 const testimonials = [
   {
-    name: "Duncan Ochieng",
+    name: "Ahmed Hassan",
     role: "Cybersecurity Engineer",
     content:
       "Working with Nocturnal was a game-changer. They understood our vision and brought it to life with cutting-edge technology.",

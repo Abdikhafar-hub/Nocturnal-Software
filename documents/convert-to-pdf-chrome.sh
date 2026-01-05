@@ -79,3 +79,4 @@ echo "  - Intellectual Property Agreement: $DOCUMENTS_DIR/intellectual-property-
 echo "  - Software Development Agreement: $DOCUMENTS_DIR/software-development-agreement.pdf"
 
 
+

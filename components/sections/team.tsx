@@ -16,18 +16,6 @@ const teamMembers = [
       email: "abdikhafarissack@gmail.com",
     },
   },
-  {
-    name: "George Williams Ochieng",
-    role: "Penetration Tester, Security Researcher, Cybersecurity Engineer",
-    bio: "A cybersecurity expert with a passion for uncovering vulnerabilities and building secure systems. With a background in penetration testing, security research, and cybersecurity engineering, he specializes in identifying and mitigating security risks in digital environments. Known for his meticulous approach and deep technical knowledge, he ensures organizations stay ahead of emerging threats and maintain robust security posture.",
-    image: "/willly.png",
-    socials: {
-      linkedin: "https://www.linkedin.com/in/george-williams-869a66357/",
-      github: "https://github.com",
-      twitter: "https://twitter.com",
-      email: "sarah@nocturnalsoftware.com",
-    },
-  },
 ]
 
 export default function Team() {

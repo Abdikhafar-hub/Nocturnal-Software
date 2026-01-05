@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Code2, Smartphone, Zap, Cloud, Palette, Shield, Brain, Code, CodeSquare } from "lucide-react"
+import { Code2, Smartphone, Zap, Cloud, Palette, Brain, Code, CodeSquare, Network } from "lucide-react"
 
 const services = [
   {
@@ -41,15 +41,6 @@ const services = [
     bgColor: "bg-cyan-50",
   },
   {
-    icon: Shield,
-    image: "/5.png",
-    title: "Cybersecurity & Data Protection",
-    description: "Robust security measures and data protection protocols to safeguard your digital assets and sensitive information.",
-    color: "from-rose-500 to-rose-600",
-    iconColor: "text-rose-600",
-    bgColor: "bg-rose-50",
-  },
-  {
     icon: Code,
     image: "/6.png",
     title: "Software Consultancy",
@@ -57,6 +48,15 @@ const services = [
     color: "from-emerald-500 to-emerald-600",
     iconColor: "text-emerald-600",
     bgColor: "bg-emerald-50",
+  },
+  {
+    icon: Network,
+    image: "/5.png",
+    title: "API Development & Integration",
+    description: "Robust RESTful and GraphQL APIs with seamless third-party integrations, microservices architecture, and comprehensive API documentation.",
+    color: "from-indigo-500 to-indigo-600",
+    iconColor: "text-indigo-600",
+    bgColor: "bg-indigo-50",
   },
 ]
 

@@ -58,11 +58,11 @@ const technologies = [
     ]
   },
   { 
-    name: "Kali Linux & Metasploit", 
-    category: "Cybersecurity",
+    name: "n8n & Make", 
+    category: "Automation",
     icons: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kalilinux/kalilinux-original.svg",
-      "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/metasploit.svg"
+      "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/n8n.svg",
+      "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/make.svg"
     ]
   },
 ]
