@@ -866,6 +866,159 @@
   }
 }
 
+/* Mission & Vision Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Mission & Vision Section */
+
+/* Mission & Vision Section Container */
+.mission-vision-section {
+  /* Ensure proper spacing on all devices */
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mission & Vision Content Container */
+.mission-vision-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mission & Vision Grid Layout */
+.mission-vision-grid {
+  gap: clamp(2rem, 5vw, 3rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mission & Vision Card */
+.mission-vision-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Icon Wrapper - Responsive Sizing */
+.mission-vision-icon-wrapper {
+  width: clamp(3rem, 7vw, 4rem);
+  height: clamp(3rem, 7vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon Size - Responsive */
+.mission-vision-icon {
+  width: clamp(1.5rem, 4vw, 2rem);
+  height: clamp(1.5rem, 4vw, 2rem);
+}
+
+/* Title - Responsive Typography */
+.mission-vision-title {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+  line-height: 1.2;
+}
+
+/* Text - Responsive Typography */
+.mission-vision-text {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .mission-vision-section {
+    padding-top: clamp(2.5rem, 6vh, 4rem);
+    padding-bottom: clamp(2.5rem, 6vh, 4rem);
+  }
+  
+  .mission-vision-grid {
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .mission-vision-section {
+    padding-top: clamp(2rem, 5vh, 3rem);
+    padding-bottom: clamp(2rem, 5vh, 3rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .mission-vision-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
+  
+  .mission-vision-grid {
+    gap: 2rem;
+  }
+  
+  .mission-vision-card {
+    padding: 1.5rem;
+  }
+  
+  .mission-vision-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+  }
+  
+  .mission-vision-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .mission-vision-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .mission-vision-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+  
+  .mission-vision-grid {
+    gap: 1.5rem;
+  }
+  
+  .mission-vision-card {
+    padding: 1.25rem;
+  }
+  
+  .mission-vision-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.625rem;
+  }
+  
+  .mission-vision-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
 /* Services Section Responsive Styles */
 /* Fluid Typography and Responsive Layout for Services Section */
 
@@ -4357,5 +4510,728 @@
   .team-social-icon {
     width: 0.875rem;
     height: 0.875rem;
+  }
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+}
+
+/* Responsive adjustments for WhatsApp button */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 12px;
+    right: 12px;
+  }
+  
+  .whatsapp-float svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Careers Section Responsive Styles */
+/* Fluid Typography and Responsive Layout for Careers Section */
+
+/* Careers Section Container */
+.careers-section {
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.careers-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Careers Header */
+.careers-header {
+  margin-bottom: clamp(3rem, 6vh, 4rem);
+}
+
+.careers-title {
+  font-size: clamp(2rem, 5vw + 0.5rem, 3rem);
+  line-height: 1.2;
+  margin-bottom: clamp(1rem, 3vh, 1.5rem);
+}
+
+.careers-subtitle {
+  font-size: clamp(1rem, 2vw + 0.25rem, 1.25rem);
+  line-height: 1.6;
+}
+
+/* Section Titles */
+.careers-section-title {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+  margin-bottom: clamp(2rem, 4vh, 2.5rem);
+}
+
+/* Job Cards */
+.careers-roles-grid {
+  gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+.careers-job-card {
+  transition: all 0.3s ease;
+}
+
+.careers-job-title {
+  font-size: clamp(1.25rem, 2.5vw + 0.25rem, 1.5rem);
+  margin-bottom: 1rem;
+}
+
+.careers-job-badges {
+  margin-bottom: 1rem;
+}
+
+.careers-job-summary {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.7;
+}
+
+/* Feature Cards */
+.careers-feature-card {
+  transition: all 0.3s ease;
+}
+
+.careers-feature-icon-wrapper {
+  width: clamp(3rem, 6vw, 3.5rem);
+  height: clamp(3rem, 6vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.careers-feature-icon {
+  width: clamp(1.5rem, 3vw, 1.75rem);
+  height: clamp(1.5rem, 3vw, 1.75rem);
+}
+
+.careers-feature-title {
+  font-size: clamp(1.125rem, 2vw + 0.25rem, 1.25rem);
+}
+
+.careers-feature-description {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.7;
+}
+
+/* Benefits Grid */
+.careers-benefits-grid {
+  gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+.careers-benefit-card {
+  transition: all 0.3s ease;
+}
+
+.careers-benefit-title {
+  font-size: clamp(1rem, 2vw + 0.25rem, 1.125rem);
+}
+
+.careers-benefit-description {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 0.875rem);
+  line-height: 1.6;
+}
+
+/* Process Steps */
+.careers-process-steps {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.careers-process-step {
+  transition: all 0.3s ease;
+}
+
+.careers-process-number {
+  flex-shrink: 0;
+}
+
+.careers-process-number-text {
+  font-size: clamp(1.25rem, 2.5vw + 0.25rem, 1.5rem);
+}
+
+.careers-process-title {
+  font-size: clamp(1.125rem, 2.5vw + 0.25rem, 1.5rem);
+}
+
+.careers-process-description {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.7;
+}
+
+/* Diversity Section */
+.careers-diversity-card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.careers-diversity-icon-wrapper {
+  width: clamp(4rem, 8vw, 5rem);
+  height: clamp(4rem, 8vw, 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.careers-diversity-icon {
+  width: clamp(2rem, 4vw, 2.5rem);
+  height: clamp(2rem, 4vw, 2.5rem);
+}
+
+.careers-diversity-title {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+}
+
+.careers-diversity-text {
+  font-size: clamp(1rem, 2vw + 0.25rem, 1.25rem);
+  line-height: 1.7;
+}
+
+/* Job Description Page Styles */
+.job-description-section {
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.job-description-container {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.job-description-back {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  margin-bottom: clamp(2rem, 4vh, 2.5rem);
+}
+
+.job-description-title {
+  font-size: clamp(2rem, 5vw + 0.5rem, 3rem);
+  line-height: 1.2;
+  margin-bottom: clamp(1rem, 3vh, 1.5rem);
+}
+
+.job-description-badges {
+  margin-bottom: clamp(1.5rem, 3vh, 2rem);
+}
+
+.job-description-summary {
+  font-size: clamp(1rem, 2vw + 0.25rem, 1.125rem);
+  line-height: 1.7;
+}
+
+.job-description-section-card {
+  margin-bottom: clamp(2rem, 4vh, 3rem);
+}
+
+.job-description-section-title {
+  font-size: clamp(1.25rem, 3vw + 0.25rem, 1.5rem);
+  margin-bottom: clamp(1.5rem, 3vh, 2rem);
+}
+
+.job-description-list {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.7;
+}
+
+.job-description-apply {
+  margin-top: clamp(2rem, 4vh, 3rem);
+}
+
+.job-description-apply-title {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+}
+
+.job-description-apply-text {
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .careers-section {
+    padding-top: clamp(2.5rem, 6vh, 4rem);
+    padding-bottom: clamp(2.5rem, 6vh, 4rem);
+  }
+  
+  .careers-roles-grid {
+    gap: clamp(1.25rem, 3vw, 1.75rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .careers-section {
+    padding-top: clamp(2rem, 5vh, 3rem);
+    padding-bottom: clamp(2rem, 5vh, 3rem);
+  }
+  
+  .careers-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .careers-header {
+    margin-bottom: clamp(2rem, 4vh, 2.5rem);
+  }
+  
+  .careers-title {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+  
+  .careers-subtitle {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    line-height: 1.6;
+  }
+  
+  .careers-section-title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    margin-bottom: clamp(1.5rem, 3vh, 2rem);
+  }
+  
+  .careers-roles-section,
+  .careers-learning-section,
+  .careers-benefits-section,
+  .careers-process-section {
+    margin-bottom: clamp(2.5rem, 5vh, 3rem);
+  }
+  
+  .careers-job-card {
+    padding: 1.25rem;
+  }
+  
+  .careers-job-title {
+    font-size: clamp(1.125rem, 4vw, 1.25rem);
+    line-height: 1.3;
+  }
+  
+  .careers-job-summary {
+    font-size: clamp(0.8125rem, 2.5vw, 0.875rem);
+    line-height: 1.6;
+  }
+  
+  .careers-feature-card {
+    padding: 1.25rem;
+  }
+  
+  .careers-feature-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+  }
+  
+  .careers-feature-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .careers-feature-title {
+    font-size: clamp(1rem, 3vw, 1.125rem);
+  }
+  
+  .careers-feature-description {
+    font-size: clamp(0.8125rem, 2.5vw, 0.875rem);
+    line-height: 1.6;
+  }
+  
+  .careers-benefits-grid {
+    gap: 1rem;
+  }
+  
+  .careers-benefit-card {
+    padding: 1.25rem;
+  }
+  
+  .careers-benefit-title {
+    font-size: clamp(0.9375rem, 3vw, 1rem);
+  }
+  
+  .careers-benefit-description {
+    font-size: clamp(0.75rem, 2vw, 0.8125rem);
+    line-height: 1.5;
+  }
+  
+  .careers-process-steps {
+    gap: 1rem;
+  }
+  
+  .careers-process-step {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  
+  .careers-process-number {
+    width: 3rem;
+    height: 3rem;
+    align-self: flex-start;
+  }
+  
+  .careers-process-number-text {
+    font-size: 1.25rem;
+  }
+  
+  .careers-process-title {
+    font-size: clamp(1rem, 3vw, 1.125rem);
+  }
+  
+  .careers-process-description {
+    font-size: clamp(0.8125rem, 2.5vw, 0.875rem);
+    line-height: 1.6;
+  }
+  
+  .careers-diversity-card {
+    padding: 1.5rem;
+  }
+  
+  .careers-diversity-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.75rem;
+  }
+  
+  .careers-diversity-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .careers-diversity-title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    margin-bottom: 0.75rem;
+  }
+  
+  .careers-diversity-text {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-section {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  
+  .careers-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .careers-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .careers-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .careers-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .careers-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .careers-roles-section,
+  .careers-learning-section,
+  .careers-benefits-section,
+  .careers-process-section {
+    margin-bottom: 2rem;
+  }
+  
+  .careers-roles-grid,
+  .careers-learning-grid {
+    gap: 1rem;
+  }
+  
+  .careers-job-card {
+    padding: 1rem;
+  }
+  
+  .careers-job-title {
+    font-size: 1.125rem;
+  }
+  
+  .careers-job-badges {
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .careers-job-summary {
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .careers-feature-card {
+    padding: 1rem;
+  }
+  
+  .careers-feature-icon-wrapper {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.5rem;
+  }
+  
+  .careers-feature-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  
+  .careers-feature-title {
+    font-size: 1rem;
+  }
+  
+  .careers-feature-description {
+    font-size: 0.8125rem;
+  }
+  
+  .careers-benefits-grid {
+    gap: 0.75rem;
+  }
+  
+  .careers-benefit-card {
+    padding: 1rem;
+  }
+  
+  .careers-benefit-title {
+    font-size: 0.9375rem;
+  }
+  
+  .careers-benefit-description {
+    font-size: 0.75rem;
+  }
+  
+  .careers-process-step {
+    padding: 1rem;
+  }
+  
+  .careers-process-number {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .careers-process-number-text {
+    font-size: 1.125rem;
+  }
+  
+  .careers-process-title {
+    font-size: 1rem;
+  }
+  
+  .careers-process-description {
+    font-size: 0.8125rem;
+  }
+  
+  .careers-diversity-card {
+    padding: 1.25rem;
+  }
+  
+  .careers-diversity-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.625rem;
+  }
+  
+  .careers-diversity-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .careers-diversity-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .careers-diversity-text {
+    font-size: 0.875rem;
+  }
+  
+  /* Job Description Page Mobile Styles */
+  .job-description-section {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  
+  .job-description-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .job-description-back {
+    font-size: 0.8125rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .job-description-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .job-description-badges {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .job-description-summary {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  .job-description-section-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .job-description-section-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .job-description-list {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+  
+  .job-description-apply {
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  
+  .job-description-apply-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .job-description-apply-text {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Job Description Page Mobile Styles (767px and below) */
+@media (max-width: 767px) {
+  .job-description-section {
+    padding-top: clamp(2rem, 5vh, 3rem);
+    padding-bottom: clamp(2rem, 5vh, 3rem);
+  }
+  
+  .job-description-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .job-description-back {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .job-description-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .job-description-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: 1rem;
+  }
+  
+  .job-description-badges {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .job-description-summary {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    line-height: 1.6;
+  }
+  
+  .job-description-section-card {
+    margin-bottom: 1.75rem;
+  }
+  
+  .job-description-section-title {
+    font-size: clamp(1.125rem, 4vw, 1.25rem);
+    margin-bottom: 1.25rem;
+    gap: 0.75rem;
+  }
+  
+  .job-description-list {
+    font-size: clamp(0.8125rem, 2.5vw, 0.875rem);
+    line-height: 1.6;
+  }
+  
+  .job-description-apply {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .job-description-apply-title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    margin-bottom: 1rem;
+  }
+  
+  .job-description-apply-text {
+    font-size: clamp(0.8125rem, 2.5vw, 0.875rem);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
   }
 }

@@ -33,6 +33,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
     { label: "Industries", id: "industries", href: "/industries" },
     { label: "Why Choose Us", id: "why-us", href: "/why-choose-us" },
     { label: "Team", id: "team", href: "/team" },
+    { label: "Careers", id: "careers", href: "/careers" },
     { label: "Contact", id: "contact", href: "/#contact" },
   ]
 

@@ -5,6 +5,7 @@ import { GoogleTagManager } from "@next/third-parties/google"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import StructuredData from "@/components/structured-data"
+import WhatsAppFloat from "@/components/whatsapp-float"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" })
@@ -103,6 +104,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <StructuredData />
         {children}
+        <WhatsAppFloat />
         <Toaster />
       </body>
     </html>

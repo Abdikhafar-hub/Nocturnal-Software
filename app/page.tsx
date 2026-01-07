@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Navigation from "@/components/navigation"
 import Hero from "@/components/sections/hero"
 import About from "@/components/sections/about"
+import MissionVision from "@/components/sections/mission-vision"
 import Services from "@/components/sections/services"
 import Portfolio from "@/components/sections/portfolio"
 import Industries from "@/components/sections/industries"
@@ -59,6 +60,7 @@ export default function Home() {
       <Navigation activeSection={activeSection} />
       <Hero />
       <About />
+      <MissionVision />
       <Services />
       <Portfolio />
       <Industries />
