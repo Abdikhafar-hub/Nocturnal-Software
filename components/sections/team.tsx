@@ -16,6 +16,18 @@ const teamMembers = [
       email: "abdikhafarissack@gmail.com",
     },
   },
+  {
+    name: "George Williams Ochieng",
+    role: "Cofounder Nocturnal Software Solutions,",
+    bio: "A dedicated technology professional committed to driving innovation and delivering exceptional software solutions. Passionate about building transformative digital experiences that make a meaningful impact.",
+    image: "/william.png",
+    socials: {
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      email: "#",
+    },
+  },
 ]
 
 export default function Team() {

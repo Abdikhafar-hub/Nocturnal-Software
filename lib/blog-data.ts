@@ -1132,4 +1132,3 @@ export function getSortedBlogPosts(): BlogPost[] {
     return dateB.getTime() - dateA.getTime()
   })
 }
-
