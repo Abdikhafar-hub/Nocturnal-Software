@@ -6,6 +6,7 @@ import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import StructuredData from "@/components/structured-data"
 import WhatsAppFloat from "@/components/whatsapp-float"
+import { ScrollAnimateProvider } from "@/components/scroll-animate-provider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" })
@@ -102,10 +103,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-TWH2XV6R" />
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
-        <StructuredData />
-        {children}
-        <WhatsAppFloat />
-        <Toaster />
+        <ScrollAnimateProvider>
+          <StructuredData />
+          {children}
+          <WhatsAppFloat />
+          <Toaster />
+        </ScrollAnimateProvider>
       </body>
     </html>
   )

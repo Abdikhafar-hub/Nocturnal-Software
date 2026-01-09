@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Code2, Smartphone, Zap, Cloud, Palette, Brain, Code, CodeSquare, Network } from "lucide-react"
 
 const services = [
@@ -61,29 +60,13 @@ const services = [
 ]
 
 export default function Services() {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("opacity-100", "translate-y-0")
-        }
-      },
-      { threshold: 0.1 },
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section id="services" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 services-section w-full overflow-x-hidden">
-      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700 services-container w-full">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 services-header">
+      <div className="max-w-6xl mx-auto services-container w-full">
+        <div 
+          className="text-center mb-8 sm:mb-12 md:mb-16 services-header"
+          data-scroll-animate="fade-down"
+        >
           <h2 className="services-title font-bold mb-3 sm:mb-4 text-primary">Our Services</h2>
           <p className="services-subtitle text-foreground/70 max-w-2xl mx-auto">
             Comprehensive digital solutions designed to transform your business and drive growth.
@@ -97,9 +80,8 @@ export default function Services() {
               <div
                 key={index}
                 className="group relative h-full services-card"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
-                }}
+                data-scroll-animate="fade-up"
+                data-scroll-delay={index * 100}
               >
                 <div className="relative h-full bg-gradient-to-br from-white to-slate-50/50 rounded-xl sm:rounded-2xl border border-slate-200 p-2 sm:p-3 md:p-4 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden group-hover:-translate-y-1">
                   {/* Accent gradient overlay */}
@@ -149,19 +131,6 @@ export default function Services() {
           })}
         </div>
       </div>
-
-      <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   )
 }

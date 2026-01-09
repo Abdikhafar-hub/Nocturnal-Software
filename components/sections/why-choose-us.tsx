@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Zap, Shield, TrendingUp, Users, Clock, Rocket } from "lucide-react"
 
 const features = [
@@ -67,29 +66,13 @@ const features = [
 ]
 
 export default function WhyChooseUs() {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("opacity-100", "translate-y-0")
-        }
-      },
-      { threshold: 0.1 },
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section id="why-us" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white why-choose-us-section w-full overflow-x-hidden">
-      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700 why-choose-us-container w-full">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 why-choose-us-header">
+      <div className="max-w-6xl mx-auto why-choose-us-container w-full">
+        <div 
+          className="text-center mb-8 sm:mb-12 md:mb-16 why-choose-us-header"
+          data-scroll-animate="fade-down"
+        >
           <h2 className="why-choose-us-title font-bold mb-3 sm:mb-4 text-primary">Why Choose Us</h2>
           <p className="why-choose-us-subtitle text-foreground/70 max-w-2xl mx-auto">
             We deliver enterprise software solutions that combine technical excellence, strategic thinking, and proven methodologies to achieve measurable business outcomes.
@@ -103,6 +86,8 @@ export default function WhyChooseUs() {
               <div
                 key={index}
                 className={`group relative bg-white border-2 ${feature.borderColor} rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden why-choose-us-card`}
+                data-scroll-animate="fade-up"
+                data-scroll-delay={index * 100}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl transition-opacity duration-500`} />

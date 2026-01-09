@@ -80,8 +80,11 @@ export default function Statistics() {
 
   return (
     <section id="statistics" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-card/50 statistics-section w-full overflow-x-hidden">
-      <div ref={ref} className="max-w-7xl mx-auto opacity-0 translate-y-10 transition-all duration-700 statistics-container w-full">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 statistics-header">
+      <div className="max-w-7xl mx-auto statistics-container w-full">
+        <div 
+          className="text-center mb-8 sm:mb-12 md:mb-16 statistics-header"
+          data-scroll-animate="fade-down"
+        >
           <h2 className="statistics-title font-bold mb-3 sm:mb-4 text-primary">Our Impact</h2>
           <p className="statistics-subtitle text-foreground/70 max-w-2xl mx-auto">
             Numbers that reflect our commitment to excellence and client success.
@@ -95,6 +98,9 @@ export default function Statistics() {
               <div
                 key={index}
                 className="group relative bg-card border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 statistics-card"
+                data-scroll-animate="scale-in"
+                data-scroll-delay={index * 100}
+                ref={index === 0 ? ref : undefined}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative flex flex-col items-center gap-2 sm:gap-3 md:gap-4 statistics-card-content">

@@ -1,34 +1,17 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Sparkles, Settings, Palette } from "lucide-react"
 
 export default function About() {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("opacity-100", "translate-y-0")
-        }
-      },
-      { threshold: 0.1 },
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section id="about" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-card/30 about-section w-full overflow-x-hidden">
-      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700 about-container w-full">
+      <div className="max-w-6xl mx-auto about-container w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-stretch about-grid">
           {/* Text Content */}
-          <div className="about-content order-2 md:order-1">
+          <div 
+            className="about-content order-2 md:order-1"
+            data-scroll-animate="slide-right"
+          >
             <h2 className="about-title font-bold mb-4 sm:mb-6 text-primary">
               About Nocturnal Software Solutions
             </h2>
@@ -72,7 +55,11 @@ export default function About() {
             </div>
           </div>
           {/* Image Section */}
-          <div className="relative about-image-wrapper order-1 md:order-2">
+          <div 
+            className="relative about-image-wrapper order-1 md:order-2"
+            data-scroll-animate="slide-left"
+            data-scroll-delay="100"
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl sm:rounded-2xl blur-3xl" />
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden h-full min-h-[300px] sm:min-h-[400px] md:min-h-full">
               <img
