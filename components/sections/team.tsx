@@ -18,11 +18,23 @@ const teamMembers = [
   },
   {
     name: "George Williams Ochieng",
-    role: "Cofounder Nocturnal Software Solutions,",
+    role: "Co-founder Nocturnal Software Solutions,",
     bio: "A dedicated technology professional committed to driving innovation and delivering exceptional software solutions. Passionate about building transformative digital experiences that make a meaningful impact.",
     image: "/william.png",
     socials: {
       linkedin: "#",
+      github: "#",
+      twitter: "#",
+      email: "#",
+    },
+  },
+  {
+    name: "Brian Thomas Mboya",
+    role: "Investment and Credit Risk Management Professional, Actuarial Science Graduate, Rust and Power BI Developer",
+    bio: "A financial professional with expertise in investment and credit risk management. As an R and Power BI developer, he builds scalable systems and data visualization solutions that transform complex financial data into actionable insights for data-driven decision-making.",
+    image: "/brian.jpeg",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/brian-mboya-8967311b2/",
       github: "#",
       twitter: "#",
       email: "#",
@@ -52,7 +64,7 @@ export default function Team() {
 
   return (
     <section id="team" className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 team-section w-full overflow-x-hidden">
-      <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-10 transition-all duration-700 team-container w-full">
+      <div ref={ref} className="max-w-[90rem] mx-auto opacity-0 translate-y-10 transition-all duration-700 team-container w-full">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 team-header">
           <h2 className="team-title font-bold mb-3 sm:mb-4 text-primary">Meet Our Team</h2>
           <p className="team-subtitle text-foreground/70 max-w-2xl mx-auto">
@@ -60,7 +72,7 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 team-grid">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 team-grid">
           {teamMembers.map((member, index) => (
             <div
               key={index}
