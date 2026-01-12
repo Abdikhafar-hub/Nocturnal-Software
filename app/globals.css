@@ -4355,6 +4355,12 @@
   */
   line-height: 1.2;
   margin-bottom: clamp(0.75rem, 2vh, 1rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Team Subtitle - Fluid Typography */
@@ -4566,8 +4572,8 @@
   }
   
   .team-container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     max-width: 100%;
   }
   
@@ -4578,6 +4584,14 @@
   
   .team-header {
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .team-title {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   
   .team-image-wrapper {

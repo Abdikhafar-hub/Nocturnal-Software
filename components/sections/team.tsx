@@ -1,7 +1,9 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 import { Linkedin, Github, Twitter, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const teamMembers = [
   {
@@ -40,10 +42,27 @@ const teamMembers = [
       email: "#",
     },
   },
+  {
+    name: "Hafsa Ibrahim",
+    role: "Sales and Marketing Agent",
+    bio: "A dynamic sales and marketing professional dedicated to driving business growth through strategic outreach and customer engagement. Specializes in building strong client relationships, developing effective marketing campaigns, and identifying new business opportunities. Known for excellent communication skills and a results-driven approach to expanding market presence and increasing brand visibility.",
+    image: "/hafsa.png",
+    socials: {
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      email: "#",
+    },
+  },
 ]
 
-export default function Team() {
+interface TeamProps {
+  limit?: number
+}
+
+export default function Team({ limit }: TeamProps) {
   const ref = useRef<HTMLDivElement>(null)
+  const displayedMembers = limit ? teamMembers.slice(0, limit) : teamMembers
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,14 +85,14 @@ export default function Team() {
     <section id="team" className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 team-section w-full overflow-x-hidden">
       <div ref={ref} className="max-w-[90rem] mx-auto opacity-0 translate-y-10 transition-all duration-700 team-container w-full">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 team-header">
-          <h2 className="team-title font-bold mb-3 sm:mb-4 text-primary">Meet Our Team</h2>
+          <h2 className="team-title font-bold mb-3 sm:mb-4 text-primary break-words whitespace-normal">Meet Our Team</h2>
           <p className="team-subtitle text-foreground/70 max-w-2xl mx-auto">
             The talented individuals behind our innovative solutions and exceptional service.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 team-grid">
-          {teamMembers.map((member, index) => (
+          {displayedMembers.map((member, index) => (
             <div
               key={index}
               className="group bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border-2 border-slate-200 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 team-card"
@@ -148,6 +167,17 @@ export default function Team() {
             </div>
           ))}
         </div>
+
+        {limit && (
+          <div className="text-center mt-8 sm:mt-12 md:mt-16">
+            <Link href="/team">
+              <Button className="relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105">
+                <span className="relative z-10">See All Team Members</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )

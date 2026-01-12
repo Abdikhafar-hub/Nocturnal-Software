@@ -68,7 +68,7 @@ export default function Home() {
       <Testimonials />
       <Technologies />
       <Statistics />
-      <Team />
+      <Team limit={3} />
       <Blog />
       <Contact />
       <CTA />
