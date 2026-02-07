@@ -42,18 +42,6 @@ const teamMembers = [
       email: "#",
     },
   },
-  {
-    name: "Hafsa Jimale Abdi",
-    role: "Sales and Marketing Agent",
-    bio: "A dynamic sales and marketing professional dedicated to driving business growth through strategic outreach and customer engagement. Specializes in building strong client relationships, developing effective marketing campaigns, and identifying new business opportunities. Known for excellent communication skills and a results-driven approach to expanding market presence and increasing brand visibility.",
-    image: "/hafsa.png",
-    socials: {
-      linkedin: "#",
-      github: "#",
-      twitter: "#",
-      email: "#",
-    },
-  },
 ]
 
 interface TeamProps {
